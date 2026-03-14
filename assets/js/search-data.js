@@ -440,16 +440,20 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-finished-the-research-internship-in-baidu",
+          title: 'Finished the research internship in Baidu.',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-moderator-is-awarded-ccs-distinguished-paper-award-at-ccs-2024",
+          title: 'Moderator is awarded CCS Distinguished Paper Award at CCS 2024.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-finished-the-research-internship-in-bytedance",
+          title: 'Finished the research internship in ByteDance.',
+          description: "",
+          section: "News",},{id: "news-got-phd-offer-from-cs-ucla",
+          title: 'Got PhD offer from CS@UCLA!',
+          description: "",
+          section: "News",},{id: "news-receive-phd-research-internship-offer-from-nvidia-see-you-in-santa-clara",
+          title: 'Receive PhD research internship offer from NVIDIA, see you in Santa Clara!',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
