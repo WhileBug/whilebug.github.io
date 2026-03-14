@@ -30,7 +30,3 @@ I'm Peiran Wang (王沛然 in Chinese, you can speak as "Pay-than, Wang"), a CS 
 I am currently interested in general AI Security (including LLM security, privacy, etc. Especially system security for LLM recently), Machine Learning System (MLSys), usable security, fraud detection and program analysis, etc.
 I graduated from Sichuan University in Cybersecurity Talented Class in 2022 (18/172). During my undergraduate, I got National Scholarship (3/172), and got GPA of 3.92 (rank 2/172).
 I'm currently a CS PhD student in UCLA, under the supervision of Prof. Yuan Tian.
-
-I am actively seeking for research internship (applied scientist intern, etc.) in U.S.
-Also I'm welcome to collaborate with some projects fitting my research interests.
-Feel free to email me.
