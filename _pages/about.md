@@ -2,16 +2,15 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Ph.D. Student in Computer Science at <a href='https://www.ucla.edu/'>UCLA</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Department of Computer Science</p>
+    <p>University of California, Los Angeles</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +26,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm Peiran Wang (王沛然 in Chinese, you can speak as "Pay-than, Wang"), a CS PhD student in UCLA.
+I am currently interested in general AI Security (including LLM security, privacy, etc. Especially system security for LLM recently), Machine Learning System (MLSys), usable security, fraud detection and program analysis, etc.
+I graduated from Sichuan University in Cybersecurity Talented Class in 2022 (18/172). During my undergraduate, I got National Scholarship (3/172), and got GPA of 3.92 (rank 2/172).
+I'm currently a CS PhD student in UCLA, under the supervision of Prof. Yuan Tian.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am actively seeking for research internship (applied scientist intern, etc.) in U.S.
+Also I'm welcome to collaborate with some projects fitting my research interests.
+Feel free to email me.
