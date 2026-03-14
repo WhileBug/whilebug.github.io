@@ -3,9 +3,9 @@
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 cv_pdf: /assets/pdf/CV-11242025.pdf
 email: whilebug@gmail.com
-github_username: whilebug
-twitter_username: WhileBugWang
-linkedin_username: peiran-wang-67b997381
-orcid_id: 0000-0001-6881-2855
+# github_username: whilebug
+# twitter_username: WhileBugWang
+# linkedin_username: peiran-wang-67b997381
+# orcid_id: 0000-0001-6881-2855
 scholar_userid: mHy2_KIAAAAJ
 rss_icon: true
