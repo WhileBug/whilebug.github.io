@@ -440,7 +440,13 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-finished-the-research-internship-in-baidu",
+            },},{id: "news-flphish-is-awarded-with-best-paper-award-in-iscc-2021",
+          title: 'FLPhish is awarded with Best Paper Award in ISCC-2021.',
+          description: "",
+          section: "News",},{id: "news-finished-the-research-internship-in-microsoft-research-asia",
+          title: 'Finished the research internship in Microsoft Research Asia.',
+          description: "",
+          section: "News",},{id: "news-finished-the-research-internship-in-baidu",
           title: 'Finished the research internship in Baidu.',
           description: "",
           section: "News",},{id: "news-moderator-is-awarded-ccs-distinguished-paper-award-at-ccs-2024",
