@@ -45,7 +45,7 @@ cv:
           - "GPA: 3.92 (Rank 2/172)"
           - "National Scholarship (3/172)"
 
-    Research Experience:
+    Experience:
       - company: University of California, Los Angeles
         position: Research Assistant
         location: Los Angeles, CA
@@ -76,7 +76,6 @@ cv:
         start_date: 2020-05-01
         end_date: 2022-06-01
 
-    Industry Experience:
       - company: ByteDance Inc.
         position: Research Intern
         location: Beijing, China
