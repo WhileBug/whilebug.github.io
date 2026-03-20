@@ -65,7 +65,12 @@
           {% endif %}
 
           {% if entry.institution %}
-            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.institution }}</h6>
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+              {% if entry.logo %}
+                <img src="{{ entry.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ entry.institution }}" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 4px;">
+              {% endif %}
+              {{ entry.institution }}
+            </h6>
           {% endif %}
 
           {% if entry.area %}

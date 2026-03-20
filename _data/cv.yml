@@ -23,6 +23,7 @@ cv:
         studyType: PhD
         start_date: 2025-09-01
         end_date:
+        logo: badges/UCLA.png
         highlights:
           - "Advisor: Prof. Yuan Tian"
 
@@ -33,6 +34,7 @@ cv:
         studyType: Master
         start_date: 2022-09-01
         end_date: 2025-07-01
+        logo: badges/THU.png
 
       - institution: Sichuan University
         location: Chengdu, China
@@ -41,6 +43,7 @@ cv:
         studyType: Bachelor
         start_date: 2018-09-01
         end_date: 2022-07-01
+        logo: badges/SCU.png
         highlights:
           - "GPA: 3.92 (Rank 2/172)"
           - "National Scholarship (3/172)"
@@ -51,78 +54,93 @@ cv:
         location: Los Angeles, CA
         start_date: 2025-09-01
         end_date:
+        logo: badges/UCLA.png
 
       - company: ByteDance Inc.
         position: Research Intern
         location: Beijing, China
         start_date: 2025-03-01
         end_date: 2025-08-01
+        logo: badges/ByteDance.png
 
       - company: ByteDance Inc.
         position: Research Intern
         location: Beijing, China
         start_date: 2024-07-01
         end_date: 2025-01-01
+        logo: badges/ByteDance.png
 
       - company: University of Wisconsin-Madison SaFoLab
         position: Research Intern
         location: Madison, WI
         start_date: 2024-08-01
         end_date: 2025-03-01
+        logo: badges/UWisc.png
 
       - company: University of Illinois Urbana-Champaign Dream Lab
         position: Research Intern
         location: Champaign, IL
         start_date: 2024-09-01
         end_date: 2025-03-01
+        logo: badges/UIUC.png
 
       - company: Baidu Inc.
         position: Research Intern
         location: Beijing, China
         start_date: 2024-05-01
         end_date: 2024-07-01
+        logo: badges/Baidu.png
 
       - company: University of California San Diego DataSmith Lab
         position: Research Intern
         location: San Diego, CA
         start_date: 2023-05-01
         end_date: 2024-02-01
+        logo: badges/UCSD.png
 
       - company: Future Capital
         position: Investment Intern
         location: Beijing, China
         start_date: 2023-05-01
         end_date: 2023-08-01
+        logo: badges/Future.png
 
       - company: Microsoft Research Asia
         position: Research Intern
         location: Beijing, China
         start_date: 2021-08-01
         end_date: 2022-06-01
+        logo: badges/Microsoft.png
 
       - company: Sichuan University Beck Lab & CodeSec Lab
         position: Research Assistant
         location: Chengdu, China
         start_date: 2020-05-01
         end_date: 2022-06-01
+        logo: badges/SCU.png
 
     Awards:
       - title: CCS Distinguished Paper Award
         date: 2024
         awarder: ACM
+        logo: badges/ACM.png
 
       - title: Star of Tomorrow
         date: 2022
         awarder: Microsoft Research Asia
+        logo: badges/Microsoft.png
 
       - title: ISCC Best Paper Award
         date: 2021
         awarder: IEEE
+        logo: badges/IEEE.png
 
       - title: National Scholarship
         date: 2019
         awarder: Ministry of Education, China
+        logo: badges/PKU_red.png
 
       - title: 1st Level Scholarship
         date: 2019
         awarder: Sichuan University
+        logo: badges/SCU.png

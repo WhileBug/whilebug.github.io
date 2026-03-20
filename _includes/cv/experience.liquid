@@ -66,7 +66,12 @@
             {% if entry.name %}{{ entry.name }}{% elsif entry.company %}{{ entry.company }}{% elsif entry.organization %}{{ entry.organization }}{% endif %}
           {% endcapture %}
           {% if company_name != '' %}
-            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ company_name }}</h6>
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+              {% if entry.logo %}
+                <img src="{{ entry.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ company_name }}" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 4px;">
+              {% endif %}
+              {{ company_name }}
+            </h6>
           {% endif %}
 
           {% if entry.summary %}
