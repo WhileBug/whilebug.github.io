@@ -3,13 +3,18 @@
     {% for area in site.data.research_areas %}
       <div class="col">
         <a href="{{ '/research/' | relative_url }}#{{ area.anchor }}" aria-label="{{ area.name }}">
-          <div
-            class="research-area-card"
-            style="background-image: url('{{ area.image | prepend: 'assets/img/' | relative_url }}');"
-          >
-            <div class="research-area-overlay">
-              <h3>{{ area.name }}</h3>
-              <p>{{ area.description }}</p>
+          <div class="card h-100 hoverable">
+            {% assign img_path = area.image | prepend: 'assets/img/' %}
+            {%
+              include figure.liquid
+              loading="eager"
+              path=img_path
+              sizes="250px"
+              alt=area.name
+              class="card-img-top"
+            %}
+            <div class="card-body">
+              <h2 class="card-title">{{ area.name }}</h2>
             </div>
           </div>
         </a>
