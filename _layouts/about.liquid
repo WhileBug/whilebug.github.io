@@ -40,6 +40,14 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Research Areas -->
+    {% if page.research_areas and page.research_areas.enabled %}
+      <h2>
+        <a href="{{ '/research/' | relative_url }}" style="color: inherit">research areas</a>
+      </h2>
+      {% include research_areas.liquid %}
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>

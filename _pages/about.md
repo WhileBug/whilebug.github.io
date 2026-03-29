@@ -24,6 +24,9 @@ latest_posts:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
+
+research_areas:
+  enabled: true
 ---
 
 I'm Peiran Wang (王沛然 in Chinese, you can speak as "Pay-than, Wang"), a CS PhD student in UCLA.
