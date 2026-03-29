@@ -1,0 +1,57 @@
+<h2>Which card style do you prefer?</h2>
+<p class="subtitle">Each card will have an image, area name, and 2-sentence description. Pick the layout that feels right for an academic homepage.</p>
+
+<div class="cards" style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;">
+
+  <!-- Option A: Image on top -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)" style="padding: 0; overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%); height: 120px; display:flex; align-items:center; justify-content:center; color:white; font-size:14px;">
+      [Area Image]
+    </div>
+    <div class="card-body" style="padding: 16px;">
+      <div class="letter" style="margin-bottom:8px">A</div>
+      <h3 style="margin:0 0 8px 0; font-size:16px;">Image on Top</h3>
+      <p style="margin:0; font-size:13px; color:#666;">Classic card layout. Image takes the top portion, title and description below. Clean and familiar — similar to the existing al-folio projects page.</p>
+    </div>
+  </div>
+
+  <!-- Option B: Image on left, text on right -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)" style="padding: 0; overflow: hidden;">
+    <div style="display:flex; flex-direction:row;">
+      <div style="background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%); width: 120px; min-height: 140px; display:flex; align-items:center; justify-content:center; color:white; font-size:14px; flex-shrink:0;">
+        [Image]
+      </div>
+      <div style="padding: 16px; flex:1;">
+        <div class="letter" style="margin-bottom:8px">B</div>
+        <h3 style="margin:0 0 8px 0; font-size:16px;">Image on Left</h3>
+        <p style="margin:0; font-size:13px; color:#666;">Horizontal layout with image on the left and text on the right. More compact, good for fitting more content.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option C: Small icon + text -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)" style="padding: 16px; overflow: hidden;">
+    <div style="display:flex; align-items:flex-start; gap:12px;">
+      <div style="background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%); width: 60px; height: 60px; border-radius: 8px; display:flex; align-items:center; justify-content:center; color:white; font-size:11px; flex-shrink:0;">
+        [Icon]
+      </div>
+      <div style="flex:1;">
+        <div class="letter" style="margin-bottom:8px">C</div>
+        <h3 style="margin:0 0 6px 0; font-size:16px;">Small Icon + Text</h3>
+        <p style="margin:0; font-size:13px; color:#666;">Compact design with a small icon/image. Emphasizes text over visuals. Minimal and academic.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option D: Full bleed image with overlay -->
+  <div class="card" data-choice="d" onclick="toggleSelect(this)" style="padding: 0; overflow: hidden; position:relative;">
+    <div style="background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%); height: 160px; display:flex; align-items:flex-end; justify-content:flex-start; position:relative;">
+      <div style="position:absolute; bottom:0; left:0; right:0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 16px;">
+        <div class="letter" style="margin-bottom:8px; color:white;">D</div>
+        <h3 style="margin:0 0 4px 0; font-size:16px; color:white;">Image with Overlay</h3>
+        <p style="margin:0; font-size:13px; color:rgba(255,255,255,0.85);">Title and description overlaid on the image. Bold and visually striking, but may reduce text readability.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
