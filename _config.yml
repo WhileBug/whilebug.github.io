@@ -184,6 +184,7 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - former_website/
+  - docs/
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
