@@ -2,7 +2,7 @@
   <div class="row row-cols-1 row-cols-md-3 g-3">
     {% for area in site.data.research_areas %}
       <div class="col">
-        <a href="{{ '/research/' | relative_url }}#{{ area.anchor }}">
+        <a href="{{ '/research/' | relative_url }}#{{ area.anchor }}" aria-label="{{ area.name }}">
           <div
             class="research-area-card"
             style="background-image: url('{{ area.image | prepend: 'assets/img/' | relative_url }}');"
