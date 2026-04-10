@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-08'
+  last_updated: '2026-04-10'
 papers:
   mHy2_KIAAAAJ:0EnyYjriUFMC:
     citations: 1
@@ -10,11 +10,11 @@ papers:
     title: 'FedCliP: Federated learning with client pruning'
     year: '2023'
   mHy2_KIAAAAJ:3fE2CSJIrl8C:
-    citations: 1
+    citations: 2
     title: 'The Landscape of Prompt Injection Threats in LLM Agents: From Taxonomy to Analysis'
     year: '2026'
   mHy2_KIAAAAJ:5nxA0vEk-isC:
-    citations: 14
+    citations: 15
     title: 'Agentarmor: Enforcing program analysis on agent runtime trace to defend against prompt injection'
     year: '2025'
   mHy2_KIAAAAJ:8k81kl-MbHgC:
