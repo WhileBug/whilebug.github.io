@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-11'
+  last_updated: '2026-05-15'
 papers:
   mHy2_KIAAAAJ:0EnyYjriUFMC:
     citations: 3
@@ -10,7 +10,7 @@ papers:
     title: 'FedCliP: Federated learning with client pruning'
     year: '2023'
   mHy2_KIAAAAJ:3fE2CSJIrl8C:
-    citations: 3
+    citations: 5
     title: 'The landscape of prompt injection threats in llm agents: From taxonomy to analysis'
     year: '2026'
   mHy2_KIAAAAJ:5nxA0vEk-isC:
@@ -78,11 +78,11 @@ papers:
     title: 'RePD: Defending jailbreak attack through a retrieval-based prompt decomposition process'
     year: '2025'
   mHy2_KIAAAAJ:hqOjcs7Dif8C:
-    citations: 2
+    citations: 3
     title: 'From hallucinations to jailbreaks: Rethinking the vulnerability of large foundation models'
     year: '2025'
   mHy2_KIAAAAJ:kNdYIx-mwKoC:
-    citations: 20
+    citations: 21
     title: 'Large language model-based data science agent: A survey'
     year: '2025'
   mHy2_KIAAAAJ:qjMakFHDy7sC:
