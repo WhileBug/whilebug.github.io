@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-04-10'
+  last_updated: '2026-05-22'
 papers:
   mHy2_KIAAAAJ:0EnyYjriUFMC:
-    citations: 1
+    citations: 3
     title: 'SAP: Privacy-Preserving Fine-Tuning on Language Models with Split-and-Privatize Framework'
     year: '2025'
   mHy2_KIAAAAJ:2osOgNQ5qMEC:
@@ -10,15 +10,15 @@ papers:
     title: 'FedCliP: Federated learning with client pruning'
     year: '2023'
   mHy2_KIAAAAJ:3fE2CSJIrl8C:
-    citations: 2
-    title: 'The Landscape of Prompt Injection Threats in LLM Agents: From Taxonomy to Analysis'
+    citations: 7
+    title: 'The landscape of prompt injection threats in llm agents: From taxonomy to analysis'
     year: '2026'
   mHy2_KIAAAAJ:5nxA0vEk-isC:
-    citations: 15
+    citations: 21
     title: 'Agentarmor: Enforcing program analysis on agent runtime trace to defend against prompt injection'
     year: '2025'
   mHy2_KIAAAAJ:8k81kl-MbHgC:
-    citations: 24
+    citations: 26
     title: Towards adversarially robust dataset distillation by curvature regularization
     year: '2025'
   mHy2_KIAAAAJ:9yKSN-GCB0IC:
@@ -26,7 +26,7 @@ papers:
     title: 'Minedetector: Javascript browser-side cryptomining detection using static methods'
     year: '2021'
   mHy2_KIAAAAJ:IjCSPb-OGe4C:
-    citations: 15
+    citations: 17
     title: 'Moderator: Moderating text-to-image diffusion models through fine-grained context-based policies'
     year: '2024'
   mHy2_KIAAAAJ:KlAtU1dfN6UC:
@@ -34,11 +34,11 @@ papers:
     title: 'From Docs to Descriptions: Smell-Aware Evaluation of MCP Server Descriptions'
     year: '2026'
   mHy2_KIAAAAJ:LkGwnXOMwfcC:
-    citations: 1
+    citations: 2
     title: 'Astra: Efficient and Money-saving Automatic Parallel Strategies Search on Heterogeneous GPUs'
     year: '2025'
   mHy2_KIAAAAJ:MXK_kJrjxJIC:
-    citations: 32
+    citations: 35
     title: Dataset distillation via the wasserstein metric
     year: '2025'
   mHy2_KIAAAAJ:Se3iqnhoufwC:
@@ -70,23 +70,23 @@ papers:
     title: 'Distributed boosting: An enhancing method on dataset distillation'
     year: '2024'
   mHy2_KIAAAAJ:d1gkVwhDpl0C:
-    citations: 25
+    citations: 26
     title: 'Fedvanet: Efficient federated learning with non-iid data for vehicular ad hoc networks'
     year: '2021'
   mHy2_KIAAAAJ:eQOLeE2rZwMC:
-    citations: 12
+    citations: 13
     title: 'RePD: Defending jailbreak attack through a retrieval-based prompt decomposition process'
     year: '2025'
   mHy2_KIAAAAJ:hqOjcs7Dif8C:
-    citations: 2
+    citations: 3
     title: 'From hallucinations to jailbreaks: Rethinking the vulnerability of large foundation models'
     year: '2025'
   mHy2_KIAAAAJ:kNdYIx-mwKoC:
-    citations: 16
+    citations: 21
     title: 'Large language model-based data science agent: A survey'
     year: '2025'
   mHy2_KIAAAAJ:qjMakFHDy7sC:
-    citations: 18
+    citations: 21
     title: 'Defending Byzantine attacks in ensemble federated learning: A reputation-based phishing approach'
     year: '2023'
   mHy2_KIAAAAJ:roLk4NBRz8UC:
@@ -98,7 +98,7 @@ papers:
     title: 'FLPhish: Reputation-based phishing Byzantine defense in ensemble federated learning'
     year: '2021'
   mHy2_KIAAAAJ:ufrVoPGSRksC:
-    citations: 10
+    citations: 11
     title: 'FedUFD: personalized edge computing using federated uncertainty-driven feature distillation'
     year: '2025'
   mHy2_KIAAAAJ:zYLM7Y9cAGgC:
