@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-05-22'
+  last_updated: '2026-06-01'
 papers:
   mHy2_KIAAAAJ:0EnyYjriUFMC:
-    citations: 3
+    citations: 4
     title: 'SAP: Privacy-Preserving Fine-Tuning on Language Models with Split-and-Privatize Framework'
     year: '2025'
   mHy2_KIAAAAJ:2osOgNQ5qMEC:
@@ -10,15 +10,15 @@ papers:
     title: 'FedCliP: Federated learning with client pruning'
     year: '2023'
   mHy2_KIAAAAJ:3fE2CSJIrl8C:
-    citations: 7
+    citations: 9
     title: 'The landscape of prompt injection threats in llm agents: From taxonomy to analysis'
     year: '2026'
   mHy2_KIAAAAJ:5nxA0vEk-isC:
-    citations: 21
+    citations: 23
     title: 'Agentarmor: Enforcing program analysis on agent runtime trace to defend against prompt injection'
     year: '2025'
   mHy2_KIAAAAJ:8k81kl-MbHgC:
-    citations: 26
+    citations: 27
     title: Towards adversarially robust dataset distillation by curvature regularization
     year: '2025'
   mHy2_KIAAAAJ:9yKSN-GCB0IC:
@@ -38,7 +38,7 @@ papers:
     title: 'Astra: Efficient and Money-saving Automatic Parallel Strategies Search on Heterogeneous GPUs'
     year: '2025'
   mHy2_KIAAAAJ:MXK_kJrjxJIC:
-    citations: 35
+    citations: 37
     title: Dataset distillation via the wasserstein metric
     year: '2025'
   mHy2_KIAAAAJ:Se3iqnhoufwC:
@@ -49,28 +49,44 @@ papers:
     citations: 1
     title: 'Top AS Router Geolocation in Databases: Performance and Techniques'
     year: '2023'
+  mHy2_KIAAAAJ:ULOm3_A8WrAC:
+    citations: 0
+    title: Securing LLM Agents Need Intent-to-Execution Integrity
+    year: '2026'
   mHy2_KIAAAAJ:UeHWp8X0CEIC:
     citations: 3
     title: 'Fedchain: An efficient and secure consensus protocol based on proof of useful federated learning for blockchain'
     year: '2023'
   mHy2_KIAAAAJ:UebtZRa9Y70C:
-    citations: 1
+    citations: 2
     title: 'Fedlore: Communication-efficient and personalized edge intelligence framework via federated low-rank estimation'
     year: '2025'
   mHy2_KIAAAAJ:WF5omc3nYNoC:
     citations: 2
     title: 'Training on fake labels: Mitigating label leakage in split learning via secure dimension transformation'
     year: '2024'
+  mHy2_KIAAAAJ:YOwf2qJgpHMC:
+    citations: 0
+    title: Reframing LLM Agent Security as an Agent-Human Interaction Problem
+    year: '2026'
   mHy2_KIAAAAJ:YsMSGLbcyi4C:
     citations: 1
     title: 'DistDD: Distributed data distillation aggregation through gradient matching'
     year: '2024'
+  mHy2_KIAAAAJ:Zph67rFs4hoC:
+    citations: 0
+    title: 'Options, Not Clicks: Lattice Refinement for Consent-Driven MCP Authorization'
+    year: '2026'
   mHy2_KIAAAAJ:_FxGoFyzp5QC:
     citations: 2
     title: 'Distributed boosting: An enhancing method on dataset distillation'
     year: '2024'
+  mHy2_KIAAAAJ:_kc_bZDykSQC:
+    citations: 0
+    title: 'Aligning Provenance with Authorization: A Dual-Graph Defense for LLM Agents'
+    year: '2026'
   mHy2_KIAAAAJ:d1gkVwhDpl0C:
-    citations: 26
+    citations: 27
     title: 'Fedvanet: Efficient federated learning with non-iid data for vehicular ad hoc networks'
     year: '2021'
   mHy2_KIAAAAJ:eQOLeE2rZwMC:
@@ -82,7 +98,7 @@ papers:
     title: 'From hallucinations to jailbreaks: Rethinking the vulnerability of large foundation models'
     year: '2025'
   mHy2_KIAAAAJ:kNdYIx-mwKoC:
-    citations: 21
+    citations: 23
     title: 'Large language model-based data science agent: A survey'
     year: '2025'
   mHy2_KIAAAAJ:qjMakFHDy7sC:
@@ -90,7 +106,7 @@ papers:
     title: 'Defending Byzantine attacks in ensemble federated learning: A reputation-based phishing approach'
     year: '2023'
   mHy2_KIAAAAJ:roLk4NBRz8UC:
-    citations: 1
+    citations: 2
     title: What are Models Thinking about? Understanding Large Language Model Hallucinations" Psychology" through Model Inner State Analysis
     year: '2025'
   mHy2_KIAAAAJ:u5HHmVD_uO8C:
