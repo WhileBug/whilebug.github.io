@@ -49,6 +49,13 @@ cv:
           - "National Scholarship (3/172)"
 
     Experience:
+      - company: NVIDIA Research
+        position: Research Intern
+        location: San Jose, CA, USA
+        start_date: 2026-06-01
+        end_date: 2026-09-01
+        logo: badges/NVIDIA.png
+
       - company: University of California, Los Angeles
         position: Research Assistant
         location: Los Angeles, CA
