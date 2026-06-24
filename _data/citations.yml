@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-17'
+  last_updated: '2026-06-24'
 papers:
   mHy2_KIAAAAJ:0EnyYjriUFMC:
     citations: 4
@@ -18,11 +18,11 @@ papers:
     title: 'FineSteer: A Unified Framework for Fine-Grained Inference-Time Steering in Large Language Models'
     year: '2026'
   mHy2_KIAAAAJ:5nxA0vEk-isC:
-    citations: 25
+    citations: 27
     title: 'Agentarmor: Enforcing program analysis on agent runtime trace to defend against prompt injection'
     year: '2025'
   mHy2_KIAAAAJ:8k81kl-MbHgC:
-    citations: 27
+    citations: 28
     title: Towards adversarially robust dataset distillation by curvature regularization
     year: '2025'
   mHy2_KIAAAAJ:9yKSN-GCB0IC:
@@ -42,7 +42,7 @@ papers:
     title: 'Astra: Efficient and Money-saving Automatic Parallel Strategies Search on Heterogeneous GPUs'
     year: '2025'
   mHy2_KIAAAAJ:MXK_kJrjxJIC:
-    citations: 37
+    citations: 38
     title: Dataset distillation via the wasserstein metric
     year: '2025'
   mHy2_KIAAAAJ:Se3iqnhoufwC:
@@ -70,7 +70,7 @@ papers:
     title: 'Training on fake labels: Mitigating label leakage in split learning via secure dimension transformation'
     year: '2024'
   mHy2_KIAAAAJ:YOwf2qJgpHMC:
-    citations: 1
+    citations: 3
     title: Reframing LLM Agent Security as an Agent-Human Interaction Problem
     year: '2026'
   mHy2_KIAAAAJ:YsMSGLbcyi4C:
@@ -94,7 +94,7 @@ papers:
     title: 'Fedvanet: Efficient federated learning with non-iid data for vehicular ad hoc networks'
     year: '2021'
   mHy2_KIAAAAJ:eQOLeE2rZwMC:
-    citations: 14
+    citations: 15
     title: 'RePD: Defending jailbreak attack through a retrieval-based prompt decomposition process'
     year: '2025'
   mHy2_KIAAAAJ:hqOjcs7Dif8C:
@@ -102,11 +102,11 @@ papers:
     title: 'From hallucinations to jailbreaks: Rethinking the vulnerability of large foundation models'
     year: '2025'
   mHy2_KIAAAAJ:kNdYIx-mwKoC:
-    citations: 27
+    citations: 26
     title: 'Large language model-based data science agent: A survey'
     year: '2025'
   mHy2_KIAAAAJ:qjMakFHDy7sC:
-    citations: 21
+    citations: 22
     title: 'Defending Byzantine attacks in ensemble federated learning: A reputation-based phishing approach'
     year: '2023'
   mHy2_KIAAAAJ:roLk4NBRz8UC:
@@ -114,7 +114,7 @@ papers:
     title: What are Models Thinking about? Understanding Large Language Model Hallucinations" Psychology" through Model Inner State Analysis
     year: '2025'
   mHy2_KIAAAAJ:u5HHmVD_uO8C:
-    citations: 9
+    citations: 10
     title: 'FLPhish: Reputation-based phishing Byzantine defense in ensemble federated learning'
     year: '2021'
   mHy2_KIAAAAJ:ufrVoPGSRksC:
