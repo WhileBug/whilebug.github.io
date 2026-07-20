@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-08'
+  last_updated: '2026-07-20'
 papers:
   mHy2_KIAAAAJ:0EnyYjriUFMC:
     citations: 5
@@ -10,7 +10,7 @@ papers:
     title: 'FedCliP: Federated learning with client pruning'
     year: '2023'
   mHy2_KIAAAAJ:3fE2CSJIrl8C:
-    citations: 20
+    citations: 21
     title: 'The landscape of prompt injection threats in llm agents: From taxonomy to analysis'
     year: '2026'
   mHy2_KIAAAAJ:4TOpqqG69KYC:
@@ -18,7 +18,7 @@ papers:
     title: 'FineSteer: A Unified Framework for Fine-Grained Inference-Time Steering in Large Language Models'
     year: '2026'
   mHy2_KIAAAAJ:5nxA0vEk-isC:
-    citations: 29
+    citations: 30
     title: 'Agentarmor: Enforcing program analysis on agent runtime trace to defend against prompt injection'
     year: '2025'
   mHy2_KIAAAAJ:8k81kl-MbHgC:
@@ -30,7 +30,7 @@ papers:
     title: 'Minedetector: Javascript browser-side cryptomining detection using static methods'
     year: '2021'
   mHy2_KIAAAAJ:IjCSPb-OGe4C:
-    citations: 17
+    citations: 18
     title: 'Moderator: Moderating text-to-image diffusion models through fine-grained context-based policies'
     year: '2024'
   mHy2_KIAAAAJ:KlAtU1dfN6UC:
@@ -46,7 +46,7 @@ papers:
     title: 'VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills'
     year: '2026'
   mHy2_KIAAAAJ:MXK_kJrjxJIC:
-    citations: 40
+    citations: 41
     title: Dataset distillation via the wasserstein metric
     year: '2025'
   mHy2_KIAAAAJ:Se3iqnhoufwC:
@@ -58,7 +58,7 @@ papers:
     title: 'Top AS Router Geolocation in Databases: Performance and Techniques'
     year: '2023'
   mHy2_KIAAAAJ:ULOm3_A8WrAC:
-    citations: 3
+    citations: 4
     title: Securing llm agents need intent-to-execution integrity
     year: '2026'
   mHy2_KIAAAAJ:UeHWp8X0CEIC:
@@ -74,8 +74,8 @@ papers:
     title: 'Training on fake labels: Mitigating label leakage in split learning via secure dimension transformation'
     year: '2024'
   mHy2_KIAAAAJ:YOwf2qJgpHMC:
-    citations: 4
-    title: Reframing LLM Agent Security as an Agent-Human Interaction Problem
+    citations: 5
+    title: Reframing llm agent security as an agent-human interaction problem
     year: '2026'
   mHy2_KIAAAAJ:YsMSGLbcyi4C:
     citations: 1
@@ -90,7 +90,7 @@ papers:
     title: 'Distributed boosting: An enhancing method on dataset distillation'
     year: '2024'
   mHy2_KIAAAAJ:_kc_bZDykSQC:
-    citations: 0
+    citations: 1
     title: 'Aligning Provenance with Authorization: A Dual-Graph Defense for LLM Agents'
     year: '2026'
   mHy2_KIAAAAJ:d1gkVwhDpl0C:
@@ -110,9 +110,13 @@ papers:
     title: 'Large language model-based data science agent: A survey'
     year: '2025'
   mHy2_KIAAAAJ:qjMakFHDy7sC:
-    citations: 23
+    citations: 22
     title: 'Defending Byzantine attacks in ensemble federated learning: A reputation-based phishing approach'
     year: '2023'
+  mHy2_KIAAAAJ:qxL8FJ1GzNcC:
+    citations: 0
+    title: "Measuring Large Language Models\u2019 Adversarial Behavior in Social Deduction Games"
+    year: '2026'
   mHy2_KIAAAAJ:roLk4NBRz8UC:
     citations: 2
     title: What are Models Thinking about? Understanding Large Language Model Hallucinations" Psychology" through Model Inner State Analysis
