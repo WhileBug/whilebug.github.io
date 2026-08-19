@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-05'
+  last_updated: '2026-08-19'
 papers:
   mHy2_KIAAAAJ:0EnyYjriUFMC:
     citations: 6
@@ -10,7 +10,7 @@ papers:
     title: 'FedCliP: Federated learning with client pruning'
     year: '2023'
   mHy2_KIAAAAJ:3fE2CSJIrl8C:
-    citations: 24
+    citations: 26
     title: 'The landscape of prompt injection threats in llm agents: From taxonomy to analysis'
     year: '2026'
   mHy2_KIAAAAJ:4TOpqqG69KYC:
@@ -18,7 +18,7 @@ papers:
     title: 'FineSteer: A Unified Framework for Fine-Grained Inference-Time Steering in Large Language Models'
     year: '2026'
   mHy2_KIAAAAJ:5nxA0vEk-isC:
-    citations: 29
+    citations: 30
     title: 'Agentarmor: Enforcing program analysis on agent runtime trace to defend against prompt injection'
     year: '2025'
   mHy2_KIAAAAJ:8k81kl-MbHgC:
@@ -30,7 +30,7 @@ papers:
     title: 'Minedetector: Javascript browser-side cryptomining detection using static methods'
     year: '2021'
   mHy2_KIAAAAJ:IjCSPb-OGe4C:
-    citations: 17
+    citations: 18
     title: 'Moderator: Moderating text-to-image diffusion models through fine-grained context-based policies'
     year: '2024'
   mHy2_KIAAAAJ:KlAtU1dfN6UC:
@@ -58,7 +58,7 @@ papers:
     title: 'Top AS Router Geolocation in Databases: Performance and Techniques'
     year: '2023'
   mHy2_KIAAAAJ:ULOm3_A8WrAC:
-    citations: 4
+    citations: 5
     title: Securing llm agents need intent-to-execution integrity
     year: '2026'
   mHy2_KIAAAAJ:UeHWp8X0CEIC:
@@ -70,7 +70,7 @@ papers:
     title: 'Fedlore: Communication-efficient and personalized edge intelligence framework via federated low-rank estimation'
     year: '2025'
   mHy2_KIAAAAJ:WF5omc3nYNoC:
-    citations: 2
+    citations: 3
     title: 'Training on fake labels: Mitigating label leakage in split learning via secure dimension transformation'
     year: '2024'
   mHy2_KIAAAAJ:YOwf2qJgpHMC:
@@ -106,7 +106,7 @@ papers:
     title: 'From hallucinations to jailbreaks: Rethinking the vulnerability of large foundation models'
     year: '2025'
   mHy2_KIAAAAJ:kNdYIx-mwKoC:
-    citations: 30
+    citations: 31
     title: 'Large language model-based data science agent: A survey'
     year: '2025'
   mHy2_KIAAAAJ:qjMakFHDy7sC:
