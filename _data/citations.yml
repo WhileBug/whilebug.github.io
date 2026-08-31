@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-08-19'
+  last_updated: '2026-08-31'
 papers:
   mHy2_KIAAAAJ:0EnyYjriUFMC:
-    citations: 6
+    citations: 8
     title: 'SAP: Privacy-Preserving Fine-Tuning on Language Models with Split-and-Privatize Framework.'
     year: '2025'
   mHy2_KIAAAAJ:2osOgNQ5qMEC:
@@ -10,7 +10,7 @@ papers:
     title: 'FedCliP: Federated learning with client pruning'
     year: '2023'
   mHy2_KIAAAAJ:3fE2CSJIrl8C:
-    citations: 26
+    citations: 28
     title: 'The landscape of prompt injection threats in llm agents: From taxonomy to analysis'
     year: '2026'
   mHy2_KIAAAAJ:4TOpqqG69KYC:
@@ -18,7 +18,7 @@ papers:
     title: 'FineSteer: A Unified Framework for Fine-Grained Inference-Time Steering in Large Language Models'
     year: '2026'
   mHy2_KIAAAAJ:5nxA0vEk-isC:
-    citations: 30
+    citations: 31
     title: 'Agentarmor: Enforcing program analysis on agent runtime trace to defend against prompt injection'
     year: '2025'
   mHy2_KIAAAAJ:8k81kl-MbHgC:
@@ -46,7 +46,7 @@ papers:
     title: 'VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills'
     year: '2026'
   mHy2_KIAAAAJ:MXK_kJrjxJIC:
-    citations: 42
+    citations: 43
     title: Dataset distillation via the wasserstein metric
     year: '2025'
   mHy2_KIAAAAJ:Se3iqnhoufwC:
@@ -90,7 +90,7 @@ papers:
     title: 'Distributed boosting: An enhancing method on dataset distillation'
     year: '2024'
   mHy2_KIAAAAJ:_kc_bZDykSQC:
-    citations: 3
+    citations: 4
     title: 'Aligning Provenance with Authorization: A Dual-Graph Defense for LLM Agents'
     year: '2026'
   mHy2_KIAAAAJ:d1gkVwhDpl0C:
@@ -106,7 +106,7 @@ papers:
     title: 'From hallucinations to jailbreaks: Rethinking the vulnerability of large foundation models'
     year: '2025'
   mHy2_KIAAAAJ:kNdYIx-mwKoC:
-    citations: 31
+    citations: 33
     title: 'Large language model-based data science agent: A survey'
     year: '2025'
   mHy2_KIAAAAJ:qjMakFHDy7sC:
@@ -126,7 +126,7 @@ papers:
     title: 'FLPhish: Reputation-based phishing Byzantine defense in ensemble federated learning'
     year: '2021'
   mHy2_KIAAAAJ:ufrVoPGSRksC:
-    citations: 12
+    citations: 13
     title: 'FedUFD: personalized edge computing using federated uncertainty-driven feature distillation'
     year: '2025'
   mHy2_KIAAAAJ:zYLM7Y9cAGgC:
