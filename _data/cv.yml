@@ -27,14 +27,14 @@ cv:
         highlights:
           - "Advisor: Prof. Yuan Tian"
 
-      - institution: Tsinghua University
-        location: Beijing, China
-        url: https://www.tsinghua.edu.cn/
-        area: Cybersecurity
-        studyType: Master
-        start_date: 2022-09-01
-        end_date: 2025-07-01
-        logo: badges/THU.png
+      #- institution: Tsinghua University
+      #  location: Beijing, China
+      #  url: https://www.tsinghua.edu.cn/
+      #  area: Cybersecurity
+      #  studyType: Master
+      #  start_date: 2022-09-01
+      #  end_date: 2025-07-01
+      #  logo: badges/THU.png
 
       - institution: Sichuan University
         location: Chengdu, China
