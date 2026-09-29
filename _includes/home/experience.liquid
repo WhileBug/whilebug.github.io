@@ -1,0 +1,16 @@
+<ul class="plain-list">
+  {% for job in site.data.cv.cv.sections.Experience %}
+    <li>
+      <span>
+        {%- if job.logo -%}
+          <img class="org-logo" src="{{ job.logo | prepend: '/assets/img/' | relative_url }}" alt="" loading="lazy">
+        {%- endif -%}
+        {{ job.position }} @ {{ job.company }}
+      </span>
+      <span class="item-date">
+        {{- job.start_date | date: '%b %Y' }} &ndash;
+        {% if job.end_date %}{{ job.end_date | date: '%b %Y' }}{% else %}Present{% endif -%}
+      </span>
+    </li>
+  {% endfor %}
+</ul>

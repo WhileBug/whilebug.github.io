@@ -116,3 +116,46 @@
     }
   }
 }
+
+.interest-list,
+.plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.interest-list li {
+  padding: 0.3rem 0;
+
+  a {
+    font-weight: 600;
+    margin-right: 0.35rem;
+  }
+
+  .interest-desc {
+    color: var(--global-text-color-light);
+    font-size: 0.92rem;
+  }
+}
+
+.plain-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.3rem 0;
+}
+
+.plain-list .item-date {
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.org-logo {
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: contain;
+  margin-right: 0.5rem;
+  vertical-align: -0.25em;
+}

@@ -18,6 +18,17 @@ layout: default
       </section>
     {% endif %}
 
+    <!-- Research interests -->
+    {% if page.research_areas and page.research_areas.enabled %}
+      <section class="home-section" data-home-section="research">
+        <div class="section-head">
+          <h2 class="section-title">Research Interests</h2>
+          <a class="section-more" href="{{ '/research/' | relative_url }}">Details &rarr;</a>
+        </div>
+        {% include research_interests.liquid %}
+      </section>
+    {% endif %}
+
     <!-- Latest posts (off in about.md; kept so it can be switched back on) -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <section class="home-section" data-home-section="posts">
@@ -37,6 +48,27 @@ layout: default
           <a class="section-more" href="{{ '/publications/' | relative_url }}">Full list &rarr;</a>
         </div>
         {% include selected_papers.liquid %}
+      </section>
+    {% endif %}
+
+    <!-- Honors & awards -->
+    {% if page.awards %}
+      <section class="home-section" data-home-section="awards">
+        <div class="section-head">
+          <h2 class="section-title">Honors &amp; Awards</h2>
+        </div>
+        {% include home/awards.liquid %}
+      </section>
+    {% endif %}
+
+    <!-- Experience -->
+    {% if page.experience %}
+      <section class="home-section" data-home-section="experience">
+        <div class="section-head">
+          <h2 class="section-title">Experience</h2>
+          <a class="section-more" href="{{ '/cv/' | relative_url }}">Full CV &rarr;</a>
+        </div>
+        {% include home/experience.liquid %}
       </section>
     {% endif %}
 

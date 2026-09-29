@@ -1,0 +1,8 @@
+<ul class="interest-list">
+  {% for area in site.data.research_areas %}
+    <li>
+      <a href="{{ '/research/' | relative_url }}#{{ area.anchor }}">{{ area.name }}</a>
+      <span class="interest-desc">{{ area.description }}</span>
+    </li>
+  {% endfor %}
+</ul>

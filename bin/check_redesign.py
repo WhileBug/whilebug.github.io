@@ -208,6 +208,29 @@ def check_home():
     pubs = home_section(html, "publications").count('<div class="title">')
     expect(pubs == selected, f"homepage shows {pubs} selected papers, papers.bib marks {selected}")
     expect(html.count('class="org-icon"') == 2, "bio should carry 2 inline org icons (UCLA, Sichuan University)")
+    css = read_site("assets/css/main.css")
+    for rule in (".hero{", ".hero-photo", ".section-title", ".home-section", ".org-icon{"):
+        expect(rule in css, f"main.css is missing the homepage rule {rule!r}")
+
+
+def check_sections():
+    html = read_site("index.html")
+    order = re.findall(r'data-home-section="([a-z]+)"', html)
+    expect(order == ["news", "research", "publications", "awards", "experience"], f"homepage section order is {order}")
+    research = home_section(html, "research")
+    for anchor in research_area_anchors():
+        expect(f'/research/#{anchor}"' in research, f"research interests missing link to /research/#{anchor}")
+    awards = home_section(html, "awards").count("<li")
+    award_entries = cv_field_count("Awards", "title")
+    expect(awards == award_entries, f"homepage shows {awards} awards, cv.yml has {award_entries}")
+    exp = home_section(html, "experience")
+    jobs = cv_field_count("Experience", "company")
+    expect(exp.count("<li") == jobs, f"homepage shows {exp.count('<li')} experience items, cv.yml has {jobs}")
+    logos = cv_field_count("Experience", "logo")
+    shown_logos = exp.count('class="org-logo"')
+    expect(shown_logos == logos, f"experience shows {shown_logos} logos, cv.yml has {logos}")
+    open_ended = cv_field_count("Experience", "start_date") - cv_field_count("Experience", "end_date")
+    expect(exp.count("Present") == open_ended, f"expected {open_ended} 'Present' end dates in experience")
 
 
 GROUPS = {
@@ -215,6 +238,7 @@ GROUPS = {
     "links": check_links,
     "nav": check_nav,
     "home": check_home,
+    "sections": check_sections,
 }
 
 

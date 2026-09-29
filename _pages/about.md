@@ -19,6 +19,8 @@ profile:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # shows the icons from _data/socials.yml under the hero
+awards: true # Honors & Awards from _data/cv.yml
+experience: true # Experience from _data/cv.yml
 
 announcements:
   enabled: true # includes a list of news items
