@@ -59,3 +59,8 @@ h3,
     white-space: nowrap;
   }
 }
+
+// Figures in pages and posts: 8px corners, no heavy shadow
+.post figure img.rounded {
+  border-radius: 8px !important;
+}

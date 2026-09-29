@@ -211,6 +211,9 @@ def check_home():
     css = read_site("assets/css/main.css")
     for rule in (".hero{", ".hero-photo", ".section-title", ".home-section", ".org-icon{"):
         expect(rule in css, f"main.css is missing the homepage rule {rule!r}")
+    # jekyll-minifier (production) rewrites calc(-a - b) as calc( - a - b), which browsers drop.
+    broken_calc = sorted(set(re.findall(r"calc\(\s*-\s[^)]*\)", css)))
+    expect(not broken_calc, f"main.css has calc() starting with a detached minus: {broken_calc}")
 
 
 def check_sections():
@@ -249,6 +252,25 @@ def check_pubs():
     expect(".award-line" in css, "main.css has no .award-line rule")
 
 
+def check_pages():
+    for page in (
+        "index.html",
+        "publications/index.html",
+        "research/index.html",
+        "news/index.html",
+        "blog/index.html",
+        "cv/index.html",
+        "404.html",
+    ):
+        html = read_site(page)
+        expect('class="fixed-bottom"' not in html, f"{page}: footer is still fixed")
+        expect("Last updated" in html, f"{page}: footer has no 'Last updated'")
+    research = between(read_site("research/index.html"), "<article", "</article>")
+    expect("z-depth-1" not in research, "research figures still use z-depth-1 shadows")
+    news = read_site("news/index.html")
+    expect(re.search(r'<h1 class="post-title">\s*News\s*</h1>', news) is not None, "news page title is not 'News'")
+
+
 GROUPS = {
     "tokens": check_tokens,
     "links": check_links,
@@ -256,6 +278,7 @@ GROUPS = {
     "home": check_home,
     "sections": check_sections,
     "pubs": check_pubs,
+    "pages": check_pages,
 }
 
 

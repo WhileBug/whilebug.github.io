@@ -25,11 +25,12 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
+  padding-top: 1.25rem;
+  padding-bottom: 2rem;
+  font-size: 0.8rem;
 
   .container {
     text-align: center;
+    color: var(--global-text-color-light);
   }
 }

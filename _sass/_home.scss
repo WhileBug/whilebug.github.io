@@ -90,7 +90,7 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: calc(-0.35rem - 2px);
+    bottom: -0.475rem; // 0.35rem padding + 2px; no calc(): jekyll-minifier breaks calc(-a - b)
     width: 2.5rem;
     height: 3px;
     background-color: var(--global-accent-color);
