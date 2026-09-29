@@ -7,9 +7,7 @@ nav: true
 nav_order: 2
 ---
 
-## AI Agent Security
-
-{: #ai-agent-security}
+## AI Agent Security {#ai-agent-security}
 
 <div style="text-align: center;">
 {% include figure.liquid loading="eager" path="assets/img/research/ai-agent-security.jpg" class="img-fluid rounded z-depth-1" width="50%" %}</div>
@@ -22,9 +20,7 @@ Securing autonomous AI agents against adversarial manipulation, prompt injection
 
 ---
 
-## Interpretable AI Security
-
-{: #interpretable-ai-security}
+## Interpretable AI Security {#interpretable-ai-security}
 
 <div style="text-align: center;">
 {% include figure.liquid loading="eager" path="assets/img/research/interpretable-ai-security.jpg" class="img-fluid rounded z-depth-1" width="50%" %}</div>
@@ -36,9 +32,7 @@ Leveraging interpretability and explainability techniques to understand, diagnos
 
 ---
 
-## Usable Security of AI
-
-{: #usable-security-of-ai}
+## Usable Security of AI {#usable-security-of-ai}
 
 <div style="text-align: center;">
 {% include figure.liquid loading="eager" path="assets/img/research/usable-security-of-ai.jpg" class="img-fluid rounded z-depth-1" width="50%" %}</div>
@@ -50,9 +44,7 @@ Designing intuitive security mechanisms and interfaces that help users safely in
 
 ---
 
-## AI Misuse Measurement
-
-{: #ai-misuse-measurement}
+## AI Misuse Measurement {#ai-misuse-measurement}
 
 <div style="text-align: center;">
 {% include figure.liquid loading="eager" path="assets/img/research/ai-misuse-measurement.jpg" class="img-fluid rounded z-depth-1" width="50%" %}</div>
@@ -63,9 +55,7 @@ Understanding and measuring how AI is being misused in the wild, from MCP server
 
 ---
 
-## AI Society Security
-
-{: #ai-society-security}
+## AI Society Security {#ai-society-security}
 
 <div style="text-align: center;">
 {% include figure.liquid loading="eager" path="assets/img/research/ai-society-security.jpg" class="img-fluid rounded z-depth-1" width="50%" %}</div>
@@ -76,9 +66,7 @@ Studying the safety implications of deploying AI as participants in social netwo
 
 ---
 
-## AI for Security
-
-{: #ai-for-security}
+## AI for Security {#ai-for-security}
 
 <div style="text-align: center;">
 {% include figure.liquid loading="eager" path="assets/img/research/ai-for-security.jpg" class="img-fluid rounded z-depth-1" width="50%" %}</div>

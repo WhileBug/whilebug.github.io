@@ -160,6 +160,11 @@ def check_links():
                 missing.add(f"{page.relative_to(SITE)} -> {url}")
     for item in sorted(missing - KNOWN_BROKEN):
         expect(False, f"broken internal link: {item}")
+    # Anchor targets must be unique, e.g. /research/#<area> links from the homepage.
+    for page in ("index.html", "research/index.html", "publications/index.html", "news/index.html", "blog/index.html", "cv/index.html", "404.html"):
+        ids = re.findall(r'\sid="([^"]+)"', read_site(page))
+        dupes = sorted({i for i in ids if ids.count(i) > 1})
+        expect(not dupes, f"{page}: duplicate ids {dupes}")
 
 
 def check_nav():
