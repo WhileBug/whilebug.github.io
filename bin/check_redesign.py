@@ -105,10 +105,12 @@ def css_vars(css, selector_regex):
 def check_tokens():
     index = read_site("index.html")
     css = read_site("assets/css/main.css")
-    expect("fonts.googleapis.com/css2?family=Inter" in index, "Google Fonts link does not load Inter (css2 API)")
-    expect("Source+Serif+4" in index, "Google Fonts link does not load Source Serif 4")
-    expect("Roboto+Slab" not in index, "old Roboto font link is still present")
-    expect("Source Serif 4" in css and "Inter" in css, "main.css does not set the Inter / Source Serif 4 families")
+    # Typography follows yrbding.github.io: Lato everywhere, dark grey headings.
+    expect("fonts.googleapis.com/css2?family=Lato" in index, "Google Fonts link does not load Lato (css2 API)")
+    expect("Roboto+Slab" not in index and "Source+Serif" not in index and "family=Inter" not in index, "an old font is still loaded")
+    expect("Lato" in css, "main.css does not set the Lato family")
+    expect("Source Serif" not in css and '"Inter"' not in css, "main.css still references Source Serif 4 / Inter")
+    expect(css_vars(css, r":root").get("--global-heading-color", "").strip().lower() == "#252525", "light headings are not yrbding dark grey #252525")
     for mode, selector in (("light", r":root"), ("dark", r"html\[data-theme=[\"']?dark[\"']?\]")):
         tokens = css_vars(css, selector)
         bg = tokens.get("--global-bg-color", "").strip()

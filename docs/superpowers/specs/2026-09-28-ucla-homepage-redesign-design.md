@@ -47,16 +47,16 @@ This is a restyle in place on top of al-folio, not a theme switch.
 
 UCLA brand palette. Gold is decorative only, never body text.
 
-| Token         | Light                       | Dark                        | Use                                      |
-| ------------- | --------------------------- | --------------------------- | ---------------------------------------- |
-| Background    | `#FFFFFF`                   | `#0F1C27`                   | page                                     |
-| Text          | `#1F2933`                   | `#E6EDF3`                   | body                                     |
-| Muted text    | `#5B6B7A`                   | `#9FB3C8`                   | dates, venues, secondary                 |
-| Theme / links | UCLA Blue `#2774AE`         | UCLA Lighter Blue `#8BB8E8` | links, paper titles, active states       |
-| Headings      | UCLA Darkest Blue `#003B5C` | `#DAEBFE`                   | h1–h3, section titles, navbar name       |
-| Accent        | UCLA Gold `#FFD100`         | `#FFD100`                   | active-nav underline, section-title rule |
-| Award text    | Dark gold `#8A6500`         | `#FFD100`                   | award line under a paper                 |
-| Divider       | `rgba(0,0,0,.1)`            | `rgba(255,255,255,.12)`     | hairlines between items                  |
+| Token         | Light               | Dark                        | Use                                      |
+| ------------- | ------------------- | --------------------------- | ---------------------------------------- |
+| Background    | `#FFFFFF`           | `#0F1C27`                   | page                                     |
+| Text          | `#303740`           | `#E6EDF3`                   | body                                     |
+| Muted text    | `#5B6B7A`           | `#9FB3C8`                   | dates, venues, secondary                 |
+| Theme / links | UCLA Blue `#2774AE` | UCLA Lighter Blue `#8BB8E8` | links, paper titles, active states       |
+| Headings      | Dark grey `#252525` | `#E8EAED`                   | h1–h3, section titles, navbar name       |
+| Accent        | UCLA Gold `#FFD100` | `#FFD100`                   | active-nav underline, section-title rule |
+| Award text    | Dark gold `#8A6500` | `#FFD100`                   | award line under a paper                 |
+| Divider       | `rgba(0,0,0,.1)`    | `rgba(255,255,255,.12)`     | hairlines between items                  |
 
 Contrast: all text tokens are at least 4.5:1 on their background (award `#8A6500` on
 white is about 5.3:1).
@@ -67,11 +67,17 @@ Implementation: set the al-folio CSS variables in `_sass/_themes.scss`
 
 ### Typography
 
-- Headings, page titles, section titles, navbar name: **Source Serif 4** (600–700).
-- Body and UI: **Inter** (400/500/600).
-- Load both by replacing the Roboto URL in `_config.yml` →
-  `third_party_libraries.google_fonts`; keep `Material+Icons` in the URL if the theme
-  still references it.
+> **Revision 2026-09-28 (user review):** typography switched from Source Serif 4 +
+> Inter to Lato everywhere, and headings from UCLA Darkest Blue to yrbding's dark grey,
+> to match yrbding.github.io more closely. Mentions of Source Serif 4 / Inter below are
+> superseded.
+
+- Everything (headings, page titles, section titles, navbar name, body, UI): **Lato**
+  400/700 with italics, stack `"Lato", Verdana, Helvetica, sans-serif`, as on
+  yrbding.github.io. Body 16px with line height 1.55; name 28px bold with −0.02em
+  letter spacing; section titles 24px bold.
+- Load it by replacing the Roboto URL in `_config.yml` →
+  `third_party_libraries.google_fonts` (Material Icons is not referenced anywhere).
 
 ### Surfaces
 

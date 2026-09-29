@@ -68,7 +68,7 @@
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--global-theme-color);
     box-shadow: inset 0 -3px 0 var(--global-accent-color);
 
@@ -218,9 +218,8 @@
 }
 
 .navbar.navbar-light .brand-name {
-  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--global-heading-color);
   white-space: nowrap;
 
