@@ -233,12 +233,29 @@ def check_sections():
     expect(exp.count("Present") == open_ended, f"expected {open_ended} 'Present' end dates in experience")
 
 
+def check_pubs():
+    html = read_site("publications/index.html")
+    titles = html.count('<div class="title">')
+    expect(titles == bib_entries(), f"publications page shows {titles} papers, papers.bib has {bib_entries()}")
+    awards = html.count('class="award-line"')
+    award_entries = bib_count(r"^\s*award\s*=")
+    expect(awards == award_entries, f"publications page shows {awards} award lines, papers.bib has {award_entries}")
+    expect('class="award btn' not in html, "collapsible award button still rendered")
+    expect('class="award hidden' not in html, "hidden award block still rendered")
+    expect("preview z-depth-1" not in html, "paper thumbnails still have the z-depth-1 shadow")
+    expect("col-sm-3 abbr" in html, "thumbnail column is not col-sm-3")
+    expect("img.shields.io/badge/scholar" not in html, "Scholar citation badge image still used")
+    css = read_site("assets/css/main.css")
+    expect(".award-line" in css, "main.css has no .award-line rule")
+
+
 GROUPS = {
     "tokens": check_tokens,
     "links": check_links,
     "nav": check_nav,
     "home": check_home,
     "sections": check_sections,
+    "pubs": check_pubs,
 }
 
 

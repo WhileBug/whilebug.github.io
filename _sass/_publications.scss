@@ -23,12 +23,16 @@
     }
   }
 
+  // Year headings on /publications/
   h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    text-align: right;
+    color: var(--global-heading-color);
+    font-size: 1.4rem;
+    text-align: left;
+    border-top: 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-top: 0;
+    padding-bottom: 0.35rem;
+    margin-top: 2.5rem;
   }
 
   ol.bibliography {
@@ -37,10 +41,17 @@
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 0;
+      padding: 1rem 0;
+
+      & + li {
+        border-top: 1px solid var(--global-divider-color);
+      }
 
       .preview {
         display: inline-block;
+        width: 100%;
+        border-radius: 6px !important;
       }
 
       .abbr {
@@ -60,18 +71,18 @@
             }
           }
         }
-
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
-        }
       }
 
       .title {
-        font-weight: bolder;
+        font-weight: 600;
+        color: var(--global-theme-color);
+        line-height: 1.35;
+        margin-bottom: 0.15rem;
       }
 
       .author {
+        font-size: 0.93rem;
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -81,9 +92,10 @@
           }
         }
 
+        // the site owner's name
         > em {
-          border-bottom: 1px solid;
           font-style: normal;
+          font-weight: 700;
         }
 
         > span.more-authors {
@@ -98,28 +110,49 @@
         }
       }
 
+      .periodical {
+        font-size: 0.93rem;
+        color: var(--global-text-color-light);
+      }
+
+      .award-line {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--global-award-color);
+        margin-top: 0.2rem;
+      }
+
       .links {
+        margin-top: 0.25rem;
+
         a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
+          color: var(--global-theme-color);
+          border: 0;
+          box-shadow: none;
+          padding: 0;
+          margin: 0 0.6rem 0 0;
+          font-size: 0.85rem;
+          text-transform: none;
+          letter-spacing: 0;
+
+          &::before {
+            content: "[";
+          }
+
+          &::after {
+            content: "]";
+          }
 
           &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
+            color: var(--global-hover-color);
+            text-decoration: underline;
           }
-        }
-        a.award.btn {
-          border-color: var(--global-highlight-color);
         }
       }
 
       .badges {
         padding-bottom: 0.5rem;
+
         span {
           display: inline-block;
           color: v.$black-color;
@@ -131,6 +164,11 @@
             text-decoration: underline;
           }
         }
+
+        .cited-by {
+          color: var(--global-text-color-light);
+          font-size: 0.85rem;
+        }
       }
 
       .hidden {
@@ -138,10 +176,6 @@
         max-height: 0px;
         overflow: hidden;
         text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
         transition: all 0.15s ease;
 
         p {
@@ -158,10 +192,6 @@
 
       .hidden.open {
         max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
         transition: all 0.15s ease;
       }
 
@@ -172,12 +202,6 @@
       div.abstract.hidden.open {
         border-color: var(--global-text-color);
       }
-    }
-    div.award.hidden {
-      border: dashed 1px var(--global-bg-color);
-    }
-    div.award.hidden.open {
-      border-color: var(--global-highlight-color);
     }
   }
 }
