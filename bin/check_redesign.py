@@ -183,10 +183,38 @@ def check_nav():
         expect('<progress id="progress"' not in html, f"{page}: scroll progress bar still rendered")
 
 
+def check_home():
+    html = read_site("index.html")
+    hero = between(html, '<header class="hero">', "</header>")
+    expect(re.search(r'<h1 class="hero-name">\s*Peiran Wang\s*</h1>', hero) is not None, "hero h1 is not 'Peiran Wang'")
+    for text in (
+        "Ph.D. Student",
+        "Department of Computer Science",
+        "University of California, Los Angeles",
+        "Advisor: Prof. Yuan Tian",
+        "UCLA Security Lab",
+    ):
+        expect(text in hero, f"hero is missing '{text}'")
+    expect('href="https://ucla-sec.com/"' in hero, "hero does not link the lab site")
+    links = between(hero, 'class="hero-links"', "</div>")
+    expect("mailto:" in links and "ai-google-scholar" in links, "hero social links missing email / Scholar")
+    expect('class="contact-icons"' not in html, "old bottom social block still rendered")
+    rows = home_section(html, "news").count("<tr>")
+    expected_rows = min(6, news_count())
+    expect(rows == expected_rows, f"homepage news shows {rows} rows, expected {expected_rows}")
+    expect('data-home-section="posts"' not in html, "latest posts section still on the homepage")
+    expect('class="research-areas"' not in html, "old research-area card grid still on the homepage")
+    selected = bib_count(r"^\s*selected\s*=\s*\{?true")
+    pubs = home_section(html, "publications").count('<div class="title">')
+    expect(pubs == selected, f"homepage shows {pubs} selected papers, papers.bib marks {selected}")
+    expect(html.count('class="org-icon"') == 2, "bio should carry 2 inline org icons (UCLA, Sichuan University)")
+
+
 GROUPS = {
     "tokens": check_tokens,
     "links": check_links,
     "nav": check_nav,
+    "home": check_home,
 }
 
 

@@ -12,7 +12,11 @@ for _ in $(seq 1 150); do
     grep -E "Liquid (Exception|Warning)|Conversion error|[^_]Error:" <<<"$logs" | head -20
     exit 1
   fi
-  if grep -q "done in" <<<"$logs"; then
+  # Only a build that started after the touch counts: a regeneration whose
+  # changed-file list has _pages/about.md on a line of its own (verbose logs also
+  # print "Reading: _pages/about.md" in every build), or a full build after a
+  # _config.yml restart. A build already running at touch time may miss edits.
+  if awk '/\|[[:space:]]+_pages\/about\.md[[:space:]]*$|Generating\.\.\./ { started = 1 } started && /done in/ { found = 1 } END { exit !found }' <<<"$logs"; then
     echo "build finished"
     exit 0
   fi

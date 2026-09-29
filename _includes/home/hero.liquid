@@ -1,0 +1,29 @@
+<header class="hero">
+  <div class="hero-text">
+    <h1 class="hero-name">{{ site.first_name | append: ' ' | append: site.last_name }}</h1>
+    {% for block in page.profile.blocks %}
+      <p class="hero-block">
+        {% for line in block.lines %}
+          {% if line.url -%}
+            <a href="{{ line.url }}">{{ line.text }}</a>
+          {%- else -%}
+            {{- line.text -}}
+          {%- endif %}
+          {% unless forloop.last %}<br>{% endunless %}
+        {% endfor %}
+      </p>
+    {% endfor %}
+    {% if page.social %}
+      <div class="hero-links">{% social_links %}</div>
+    {% endif %}
+  </div>
+  {% if page.profile.image %}
+    {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+    <div class="hero-photo">
+      {%
+        include figure.liquid loading="eager" path=profile_image_path class="img-fluid" sizes="200px" alt="Portrait of Peiran Wang"
+        cache_bust=true
+      %}
+    </div>
+  {% endif %}
+</header>
