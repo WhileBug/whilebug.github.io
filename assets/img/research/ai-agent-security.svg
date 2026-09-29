@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="AI agent security: a shielded agent and the tools, prompts, permissions and memory it touches">
+  <rect width="1200" height="675" rx="32" fill="#EAF2FA"/>
+  <circle cx="600" cy="338" r="235" fill="#DAEBFE"/>
+  <g stroke="#8BB8E8" stroke-width="5" stroke-dasharray="2 14" stroke-linecap="round" fill="none">
+    <path d="M468 262 L352 212"/>
+    <path d="M478 410 L372 468"/>
+    <path d="M732 262 L848 212"/>
+    <path d="M722 410 L828 468"/>
+  </g>
+  <g transform="translate(600 338)">
+    <path d="M0 -178 L135 -130 V-3 C135 87 75 147 0 177 C-75 147 -135 87 -135 -3 V-130 Z" fill="#2774AE"/>
+    <path d="M0 -148 L110 -109 V-3 C110 72 61 122 0 148 C-61 122 -110 72 -110 -3 V-109 Z" fill="none" stroke="#FFFFFF" stroke-opacity=".25" stroke-width="3"/>
+    <line x1="0" y1="-55" x2="0" y2="-78" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="0" cy="-87" r="12" fill="#FFD100"/>
+    <rect x="-82" y="-23" width="16" height="34" rx="8" fill="#FFFFFF"/>
+    <rect x="66" y="-23" width="16" height="34" rx="8" fill="#FFFFFF"/>
+    <rect x="-67" y="-55" width="134" height="104" rx="24" fill="#FFFFFF"/>
+    <circle cx="-30" cy="-10" r="12" fill="#003B5C"/>
+    <circle cx="30" cy="-10" r="12" fill="#003B5C"/>
+    <rect x="-26" y="19" width="52" height="9" rx="4.5" fill="#8BB8E8"/>
+  </g>
+  <circle cx="290" cy="190" r="72" fill="#FFFFFF"/>
+  <g transform="translate(290 190)">
+    <rect x="-42" y="-32" width="84" height="64" rx="12" fill="#2774AE"/>
+    <polyline points="-24,-12 -9,0 -24,12" fill="none" stroke="#FFD100" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="0" y1="13" x2="24" y2="13" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <circle cx="310" cy="490" r="72" fill="#FFFFFF"/>
+  <g transform="translate(310 490)">
+    <rect x="-30" y="-42" width="54" height="70" rx="8" fill="#2774AE"/>
+    <g stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"><line x1="-18" y1="-22" x2="12" y2="-22"/><line x1="-18" y1="-7" x2="12" y2="-7"/><line x1="-18" y1="8" x2="0" y2="8"/></g>
+    <path d="M36 -8 L66 44 H6 Z" fill="#FFD100" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+    <line x1="36" y1="9" x2="36" y2="27" stroke="#003B5C" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="36" cy="36" r="3.2" fill="#003B5C"/>
+  </g>
+  <circle cx="910" cy="190" r="72" fill="#FFFFFF"/>
+  <g transform="translate(910 190)">
+    <path d="M-23 -4 V-20 A23 23 0 0 1 23 -20 V-4" fill="none" stroke="#2774AE" stroke-width="9" stroke-linecap="round"/>
+    <rect x="-34" y="-6" width="68" height="52" rx="10" fill="#2774AE"/>
+    <circle cx="0" cy="15" r="7" fill="#FFFFFF"/>
+    <rect x="-3.5" y="16" width="7" height="15" rx="3" fill="#FFFFFF"/>
+  </g>
+  <circle cx="890" cy="490" r="72" fill="#FFFFFF"/>
+  <g transform="translate(890 490)">
+    <rect x="-36" y="-28" width="72" height="54" fill="#2774AE"/>
+    <ellipse cx="0" cy="26" rx="36" ry="12" fill="#2774AE"/>
+    <ellipse cx="0" cy="-28" rx="36" ry="12" fill="#5C9BD1"/>
+    <path d="M-36 -10 A36 12 0 0 0 36 -10 M-36 8 A36 12 0 0 0 36 8" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  </g>
+  <circle cx="165" cy="330" r="8" fill="#FFD100"/>
+  <circle cx="1040" cy="345" r="8" fill="#FFD100"/>
+  <circle cx="600" cy="600" r="6" fill="#8BB8E8"/>
+</svg>

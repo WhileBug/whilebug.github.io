@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="AI for security: an AI chip guarding systems, catching bugs, phishing, malicious code and raising alerts">
+  <rect width="1200" height="675" rx="32" fill="#EAF2FA"/>
+  <circle cx="600" cy="338" r="235" fill="#DAEBFE"/>
+  <g stroke="#8BB8E8" stroke-width="5" stroke-dasharray="2 14" stroke-linecap="round" fill="none">
+    <path d="M468 262 L352 212"/>
+    <path d="M478 410 L372 468"/>
+    <path d="M732 262 L848 212"/>
+    <path d="M722 410 L828 468"/>
+  </g>
+  <g transform="translate(600 338)">
+    <rect x="-68" y="-132" width="16" height="26" rx="4" fill="#2774AE"/><rect x="-68" y="106" width="16" height="26" rx="4" fill="#2774AE"/><rect x="-132" y="-68" width="26" height="16" rx="4" fill="#2774AE"/><rect x="106" y="-68" width="26" height="16" rx="4" fill="#2774AE"/><rect x="-28" y="-132" width="16" height="26" rx="4" fill="#2774AE"/><rect x="-28" y="106" width="16" height="26" rx="4" fill="#2774AE"/><rect x="-132" y="-28" width="26" height="16" rx="4" fill="#2774AE"/><rect x="106" y="-28" width="26" height="16" rx="4" fill="#2774AE"/><rect x="12" y="-132" width="16" height="26" rx="4" fill="#2774AE"/><rect x="12" y="106" width="16" height="26" rx="4" fill="#2774AE"/><rect x="-132" y="12" width="26" height="16" rx="4" fill="#2774AE"/><rect x="106" y="12" width="26" height="16" rx="4" fill="#2774AE"/><rect x="52" y="-132" width="16" height="26" rx="4" fill="#2774AE"/><rect x="52" y="106" width="16" height="26" rx="4" fill="#2774AE"/><rect x="-132" y="52" width="26" height="16" rx="4" fill="#2774AE"/><rect x="106" y="52" width="26" height="16" rx="4" fill="#2774AE"/>
+    <rect x="-110" y="-110" width="220" height="220" rx="28" fill="#2774AE"/>
+    <rect x="-72" y="-72" width="144" height="144" rx="18" fill="#FFFFFF"/>
+    <path d="M0 -52 L42 -38 V0 C42 30 22 48 0 56 C-22 48 -42 30 -42 0 V-38 Z" fill="#003B5C"/>
+    <polyline points="-16,2 -4,14 18,-12" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="-90" cy="-90" r="8" fill="#FFD100"/>
+  </g>
+  <circle cx="290" cy="190" r="72" fill="#FFFFFF"/>
+  <g transform="translate(290 190)">
+    <g stroke="#003B5C" stroke-width="5" stroke-linecap="round">
+      <line x1="-20" y1="-4" x2="-36" y2="-12"/><line x1="-20" y1="8" x2="-38" y2="8"/><line x1="-20" y1="20" x2="-34" y2="30"/>
+      <line x1="20" y1="-4" x2="36" y2="-12"/><line x1="20" y1="8" x2="38" y2="8"/><line x1="20" y1="20" x2="34" y2="30"/>
+      <line x1="-5" y1="-32" x2="-14" y2="-44"/><line x1="5" y1="-32" x2="14" y2="-44"/>
+    </g>
+    <ellipse cx="0" cy="6" rx="20" ry="26" fill="#2774AE"/>
+    <circle cx="0" cy="-24" r="12" fill="#003B5C"/>
+    <line x1="0" y1="-12" x2="0" y2="30" stroke="#FFFFFF" stroke-width="3"/>
+    <circle cx="-9" cy="2" r="3.5" fill="#FFD100"/><circle cx="9" cy="14" r="3.5" fill="#FFD100"/>
+  </g>
+  <circle cx="310" cy="490" r="72" fill="#FFFFFF"/>
+  <g transform="translate(310 490)">
+    <rect x="-38" y="-12" width="62" height="44" rx="6" fill="#2774AE"/>
+    <polyline points="-38,-10 -7,14 24,-10" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M34 -46 V-4 C34 16 10 16 10 -2" fill="none" stroke="#FFD100" stroke-width="6" stroke-linecap="round"/>
+    <line x1="10" y1="-2" x2="17" y2="-10" stroke="#FFD100" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <circle cx="910" cy="190" r="72" fill="#FFFFFF"/>
+  <g transform="translate(910 190)">
+    <g fill="none" stroke="#2774AE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="-16,-26 -38,0 -16,26"/><polyline points="16,-26 38,0 16,26"/>
+    </g>
+    <line x1="8" y1="-30" x2="-8" y2="30" stroke="#FFD100" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <circle cx="890" cy="490" r="72" fill="#FFFFFF"/>
+  <g transform="translate(890 490)">
+    <circle cx="0" cy="-40" r="5" fill="#2774AE"/>
+    <path d="M0 -38 C-20 -38 -28 -22 -28 -4 V14 L-36 24 H36 L28 14 V-4 C28 -22 20 -38 0 -38 Z" fill="#2774AE"/>
+    <circle cx="0" cy="32" r="8" fill="#003B5C"/>
+    <circle cx="26" cy="-28" r="10" fill="#FFD100" stroke="#FFFFFF" stroke-width="4"/>
+  </g>
+  <circle cx="165" cy="330" r="8" fill="#FFD100"/>
+  <circle cx="1040" cy="345" r="8" fill="#FFD100"/>
+  <circle cx="600" cy="600" r="6" fill="#8BB8E8"/>
+</svg>

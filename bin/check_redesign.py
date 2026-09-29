@@ -297,6 +297,33 @@ def check_pages():
     expect(re.search(r'<h1 class="post-title">\s*News\s*</h1>', news) is not None, "news page title is not 'News'")
 
 
+RESEARCH_PALETTE = {"#eaf2fa", "#daebfe", "#8bb8e8", "#5c9bd1", "#2774ae", "#003b5c", "#ffd100", "#ffffff"}
+
+
+def check_research():
+    """Research figures: one flat SVG per area, same canvas and palette, no text or raster."""
+    anchors = research_area_anchors()
+    article = between(read_site("research/index.html"), "<article", "</article>")
+    srcs = re.findall(r'<img[^>]*src="(/assets/img/research/[^"?]+)', article)
+    expect(len(srcs) == len(anchors), f"research page shows {len(srcs)} figures for {len(anchors)} areas")
+    for src in srcs:
+        expect(src.endswith(".svg"), f"research figure is not an SVG: {src}")
+        path = SITE / src.lstrip("/")
+        if not (src.endswith(".svg") and path.exists()):
+            expect(path.exists(), f"research figure missing: {src}")
+            continue
+        svg = path.read_text(encoding="utf-8")
+        expect('viewBox="0 0 1200 675"' in svg, f"{src}: canvas is not 1200x675")
+        expect("<text" not in svg and "<image" not in svg, f"{src}: contains text or an embedded raster")
+        colors = {c.lower() for c in re.findall(r"#[0-9A-Fa-f]{6}\b", svg)}
+        expect(colors <= RESEARCH_PALETTE, f"{src}: colors outside the palette {sorted(colors - RESEARCH_PALETTE)}")
+    data_images = re.findall(r"^\s*image:\s*(\S+)", read_src("_data/research_areas.yml"), flags=re.M)
+    for image in data_images:
+        expect(image.endswith(".svg") and (ROOT / "assets/img" / image).exists(), f"research_areas.yml image not an existing SVG: {image}")
+    leftovers = sorted(p.name for p in (ROOT / "assets/img/research").glob("*.jpg"))
+    expect(not leftovers, f"old research JPGs still present: {leftovers}")
+
+
 GROUPS = {
     "tokens": check_tokens,
     "links": check_links,
@@ -305,6 +332,7 @@ GROUPS = {
     "sections": check_sections,
     "pubs": check_pubs,
     "pages": check_pages,
+    "research": check_research,
 }
 
 

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Usable security of AI: a person chatting with an AI app, with warnings, fingerprint login, privacy switches and deepfake detection">
+  <rect width="1200" height="675" rx="32" fill="#EAF2FA"/>
+  <circle cx="600" cy="338" r="235" fill="#DAEBFE"/>
+  <g stroke="#8BB8E8" stroke-width="5" stroke-dasharray="2 14" stroke-linecap="round" fill="none">
+    <path d="M468 262 L352 212"/>
+    <path d="M478 410 L372 468"/>
+    <path d="M732 262 L848 212"/>
+    <path d="M722 410 L828 468"/>
+  </g>
+  <g transform="translate(600 338)">
+    <rect x="-140" y="-120" width="260" height="200" rx="22" fill="#2774AE"/>
+    <circle cx="-116" cy="-98" r="6" fill="#8BB8E8"/><circle cx="-98" cy="-98" r="6" fill="#8BB8E8"/><circle cx="-80" cy="-98" r="6" fill="#8BB8E8"/>
+    <rect x="-118" y="-72" width="150" height="34" rx="17" fill="#FFFFFF"/>
+    <rect x="-40" y="-26" width="140" height="34" rx="17" fill="#FFD100"/>
+    <rect x="-118" y="20" width="110" height="34" rx="17" fill="#FFFFFF"/>
+    <path d="M58 150 C58 104 162 104 162 150 Z" fill="#003B5C" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    <circle cx="110" cy="62" r="32" fill="#003B5C" stroke="#FFFFFF" stroke-width="6"/>
+  </g>
+  <circle cx="290" cy="190" r="72" fill="#FFFFFF"/>
+  <g transform="translate(290 190)">
+    <rect x="-40" y="-30" width="80" height="60" rx="10" fill="#2774AE"/>
+    <path d="M0 -18 L20 16 H-20 Z" fill="#FFD100" stroke-linejoin="round"/>
+    <line x1="0" y1="-6" x2="0" y2="5" stroke="#003B5C" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="10.5" r="2.2" fill="#003B5C"/>
+  </g>
+  <circle cx="310" cy="490" r="72" fill="#FFFFFF"/>
+  <g transform="translate(310 490)">
+    <g fill="none" stroke="#2774AE" stroke-width="5" stroke-linecap="round">
+      <path d="M-26 22 C-34 -8 -18 -36 0 -36 C18 -36 34 -8 26 22"/>
+      <path d="M-14 26 C-22 0 -10 -24 0 -24 C10 -24 22 0 14 26"/>
+      <path d="M-3 28 C-10 8 -5 -12 0 -12 C5 -12 10 8 3 28"/>
+    </g>
+  </g>
+  <circle cx="910" cy="190" r="72" fill="#FFFFFF"/>
+  <g transform="translate(910 190)">
+    <rect x="-28" y="-28" width="56" height="24" rx="12" fill="#2774AE"/>
+    <circle cx="16" cy="-16" r="9" fill="#FFFFFF"/>
+    <rect x="-28" y="4" width="56" height="24" rx="12" fill="#DAEBFE" stroke="#8BB8E8" stroke-width="3"/>
+    <circle cx="-16" cy="16" r="9" fill="#8BB8E8"/>
+  </g>
+  <circle cx="890" cy="490" r="72" fill="#FFFFFF"/>
+  <g transform="translate(890 490)">
+    <path d="M-40 0 C-22 -30 22 -30 40 0 C22 30 -22 30 -40 0 Z" fill="#FFFFFF" stroke="#2774AE" stroke-width="6" stroke-linejoin="round"/>
+    <circle cx="0" cy="0" r="16" fill="#2774AE"/>
+    <circle cx="0" cy="0" r="7" fill="#003B5C"/>
+    <circle cx="5" cy="-5" r="3" fill="#FFFFFF"/>
+  </g>
+  <circle cx="165" cy="330" r="8" fill="#FFD100"/>
+  <circle cx="1040" cy="345" r="8" fill="#FFD100"/>
+  <circle cx="600" cy="600" r="6" fill="#8BB8E8"/>
+</svg>
