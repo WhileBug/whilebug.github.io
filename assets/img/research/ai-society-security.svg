@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="AI society security: a globe and the people on it, with governance, misinformation, surveillance and public trust">
+  <rect width="1200" height="675" rx="32" fill="#EAF2FA"/>
+  <circle cx="600" cy="338" r="235" fill="#DAEBFE"/>
+  <g stroke="#8BB8E8" stroke-width="5" stroke-dasharray="2 14" stroke-linecap="round" fill="none">
+    <path d="M468 262 L352 212"/>
+    <path d="M478 410 L372 468"/>
+    <path d="M732 262 L848 212"/>
+    <path d="M722 410 L828 468"/>
+  </g>
+  <g transform="translate(600 338)">
+    <circle cx="0" cy="-30" r="125" fill="#2774AE"/>
+    <g fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="5">
+      <ellipse cx="0" cy="-30" rx="60" ry="125"/>
+      <line x1="-125" y1="-30" x2="125" y2="-30"/>
+      <line x1="-110" y1="-90" x2="110" y2="-90"/>
+      <line x1="-110" y1="30" x2="110" y2="30"/>
+    </g>
+    <path d="M-116 150 C-116 108 -24 108 -24 150 Z" fill="#003B5C" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M24 150 C24 108 116 108 116 150 Z" fill="#003B5C" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    <circle cx="-70" cy="74" r="26" fill="#003B5C" stroke="#FFFFFF" stroke-width="6"/>
+    <circle cx="70" cy="74" r="26" fill="#003B5C" stroke="#FFFFFF" stroke-width="6"/>
+    <path d="M-50 158 C-50 110 50 110 50 158 Z" fill="#FFD100" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    <circle cx="0" cy="78" r="29" fill="#FFD100" stroke="#FFFFFF" stroke-width="6"/>
+  </g>
+  <circle cx="290" cy="190" r="72" fill="#FFFFFF"/>
+  <g transform="translate(290 190)">
+    <line x1="0" y1="-34" x2="0" y2="30" stroke="#003B5C" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-18" y1="32" x2="18" y2="32" stroke="#003B5C" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-34" y1="-24" x2="34" y2="-24" stroke="#2774AE" stroke-width="6" stroke-linecap="round"/>
+    <g stroke="#2774AE" stroke-width="3"><line x1="-34" y1="-24" x2="-44" y2="4"/><line x1="-34" y1="-24" x2="-24" y2="4"/><line x1="34" y1="-24" x2="24" y2="4"/><line x1="34" y1="-24" x2="44" y2="4"/></g>
+    <path d="M-48 4 A14 9 0 0 0 -20 4 Z M20 4 A14 9 0 0 0 48 4 Z" fill="#2774AE"/>
+    <circle cx="0" cy="-34" r="5" fill="#FFD100"/>
+  </g>
+  <circle cx="310" cy="490" r="72" fill="#FFFFFF"/>
+  <g transform="translate(310 490)">
+    <rect x="-34" y="-38" width="60" height="72" rx="8" fill="#2774AE"/>
+    <rect x="-26" y="-30" width="44" height="12" rx="3" fill="#FFFFFF"/>
+    <g stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"><line x1="-26" y1="-6" x2="18" y2="-6"/><line x1="-26" y1="6" x2="18" y2="6"/><line x1="-26" y1="18" x2="2" y2="18"/></g>
+    <path d="M30 -2 L58 46 H2 Z" fill="#FFD100" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+    <line x1="30" y1="14" x2="30" y2="30" stroke="#003B5C" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="30" cy="38" r="3" fill="#003B5C"/>
+  </g>
+  <circle cx="910" cy="190" r="72" fill="#FFFFFF"/>
+  <g transform="translate(910 190)">
+    <line x1="10" y1="10" x2="20" y2="32" stroke="#003B5C" stroke-width="6" stroke-linecap="round"/>
+    <rect x="8" y="30" width="26" height="9" rx="3" fill="#003B5C"/>
+    <g transform="rotate(-18)">
+      <rect x="-36" y="-22" width="60" height="34" rx="8" fill="#2774AE"/>
+      <circle cx="-36" cy="-5" r="10" fill="#003B5C"/>
+      <circle cx="12" cy="-12" r="4" fill="#FFD100"/>
+    </g>
+  </g>
+  <circle cx="890" cy="490" r="72" fill="#FFFFFF"/>
+  <g transform="translate(890 490)">
+    <path d="M-18 12 L-26 44 L-12 36 L-4 46 L2 18 Z M18 12 L26 44 L12 36 L4 46 L-2 18 Z" fill="#FFD100"/>
+    <circle cx="0" cy="-8" r="30" fill="#2774AE"/>
+    <polyline points="-12,-8 -3,2 14,-16" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <circle cx="165" cy="330" r="8" fill="#FFD100"/>
+  <circle cx="1040" cy="345" r="8" fill="#FFD100"/>
+  <circle cx="600" cy="600" r="6" fill="#8BB8E8"/>
+</svg>
