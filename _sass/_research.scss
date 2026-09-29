@@ -1,0 +1,66 @@
+/*******************************************************************************
+ * Research page: 3x2 grid of area cards (content in _data/research_areas.yml)
+ ******************************************************************************/
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .research-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.research-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  scroll-margin-top: 80px; // clear the fixed navbar when jumping from the homepage
+
+  // highlight the card a homepage link jumped to
+  &:target {
+    border-color: var(--global-theme-color);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    margin: 0.85rem 0 0.35rem;
+  }
+
+  .research-detail {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--global-text-color-light);
+    margin: 0 0 0.6rem;
+  }
+
+  .research-papers {
+    padding-left: 1.1rem;
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.45;
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+  }
+}

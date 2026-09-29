@@ -1,0 +1,18 @@
+<div class="research-grid">
+  {% for area in site.data.research_areas %}
+    <section class="research-card" id="{{ area.anchor }}">
+      <img src="{{ area.image | prepend: '/assets/img/' | relative_url }}" alt="" width="1200" height="675">
+      <h2>{{ area.name }}</h2>
+      <p class="research-detail">{{ area.detail | default: area.description }}</p>
+      {% if area.papers %}
+        <ul class="research-papers">
+          {% for paper in area.papers %}
+            <li>
+              <a href="{{ paper.url }}">{{ paper.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+  {% endfor %}
+</div>

@@ -2,28 +2,57 @@
   description: "Securing autonomous AI agents against adversarial manipulation, prompt injection, and unintended behaviors in real-world deployments."
   image: research/ai-agent-security.svg
   anchor: ai-agent-security
+  papers:
+    - title: "[Arxiv-2026] PI-SoK: The Landscape of Prompt Injection Threats in LLM Agents"
+      url: https://arxiv.org/abs/2602.10453
+    - title: "[Arxiv-2025] AgentArmor: Enforcing Program Analysis on Agent Runtime Trace to Defend Against Prompt Injection"
+      url: https://www.arxiv.org/abs/2508.01249
+    - title: "[Arxiv-2024] PIB-Bench: Prompt Injection Benchmark for Foundation Model Integrated Systems"
+      url: https://openreview.net/forum?id=MsRdq0ePTR
 
 - name: Interpretable AI Security
   description: "Leveraging interpretability and explainability techniques to understand, diagnose, and mitigate vulnerabilities in AI systems."
   image: research/interpretable-ai-security.svg
   anchor: interpretable-ai-security
+  papers:
+    - title: "[Arxiv-2025] HaluProbe: What Are Models Thinking About? Understanding LLM Hallucinations Through Model Inner State Analysis"
+      url: https://arxiv.org/abs/2502.13490
+    - title: "[Arxiv-2025] Halu2Jail: From Hallucinations to Jailbreaks: Rethinking the Vulnerability of Large Foundation Models"
+      url: https://www.arxiv.org/abs/2505.24232
 
 - name: Usable Security of AI
   description: "Designing intuitive security mechanisms and interfaces that help users safely interact with and configure AI systems."
   image: research/usable-security-of-ai.svg
   anchor: usable-security-of-ai
+  papers:
+    - title: "[CCS-2024] Moderator: Moderating Text-to-Image Diffusion Models through Fine-grained Context-based Policies"
+      url: https://arxiv.org/abs/2408.07728
+    - title: "[NAACL-2025] RePD: Defending Jailbreak Attacks Through a Retrieval-based Prompt Decomposition Process"
+      url: https://aclanthology.org/2025.findings-naacl.16/
 
 - name: AI Misuse Measurement
   description: "Developing methods to quantify and detect malicious applications of AI, from deepfakes to automated cyber attacks."
   image: research/ai-misuse-measurement.svg
   anchor: ai-misuse-measurement
+  detail: "Understanding and measuring how AI is being misused in the wild, from MCP server poisoning to adversarial exploitation of AI-powered services, and developing methods to quantify such misuse at scale." # longer text shown on /research/
+  papers:
+    - title: "[Arxiv-2026] MCPSmell: From Docs to Descriptions: Smell-Aware Evaluation of MCP Server Descriptions"
+      url: https://arxiv.org/abs/2602.18914
 
 - name: AI Society Security
   description: "Investigating the societal impacts of AI security risks, including misinformation, surveillance, and governance challenges."
   image: research/ai-society-security.svg
   anchor: ai-society-security
+  detail: "Studying the safety implications of deploying AI as participants in social networks and human-like environments, including how AI handles moral dilemmas, social norms, and trust dynamics when acting as autonomous social agents." # longer text shown on /research/
+  papers:
+    - title: "[ICLR-2026] TrustGen: A Platform of Dynamic Benchmarking on the Trustworthiness of Generative Foundation Models"
+      url: https://openreview.net/forum?id=Fcf5fLmaeG
 
 - name: AI for Security
   description: "Applying AI techniques to strengthen cybersecurity defenses, including threat detection, vulnerability analysis, and automated response."
   image: research/ai-for-security.svg
   anchor: ai-for-security
+  detail: "Applying AI techniques to strengthen cybersecurity defenses, including automated vulnerability repair, threat detection, and security analysis." # longer text shown on /research/
+  papers:
+    - title: "[NAACL-2025] CVE-Bench: Benchmarking LLM-based Software Engineering Agent's Ability to Repair Real-World CVE Vulnerabilities"
+      url: https://aclanthology.org/2025.naacl-long.212/

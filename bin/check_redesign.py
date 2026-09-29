@@ -322,6 +322,17 @@ def check_research():
         expect(image.endswith(".svg") and (ROOT / "assets/img" / image).exists(), f"research_areas.yml image not an existing SVG: {image}")
     leftovers = sorted(p.name for p in (ROOT / "assets/img/research").glob("*.jpg"))
     expect(not leftovers, f"old research JPGs still present: {leftovers}")
+    # 3x2 card grid generated from _data/research_areas.yml, one card per area.
+    expect('class="research-grid"' in article, "research page has no .research-grid")
+    entries = read_src("_data/research_areas.yml").split("\n- name:")[1:]
+    cards = re.findall(r'<section class="research-card" id="([\w-]+)"', article)
+    expect(cards == anchors, f"research cards {cards} do not match areas {anchors}")
+    for entry in entries:
+        anchor = re.search(r"^\s*anchor:\s*(\S+)", entry, re.M).group(1)
+        card = between(article, f'id="{anchor}"', "</section>")
+        papers = len(re.findall(r"^\s+url:", entry, re.M))
+        shown = between(card, '<ul class="research-papers">', "</ul>").count("<a ")
+        expect(shown == papers, f"{anchor}: card lists {shown} papers, research_areas.yml has {papers}")
 
 
 GROUPS = {

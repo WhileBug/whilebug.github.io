@@ -156,6 +156,12 @@ text; the "All news →" / "Full list →" links sit at the right end of the tit
   - Year headings in Source Serif 4 with a hairline; the bib search box stays, simplified.
 - **Research** (`_pages/research.md`): content untouched; inherits typography; figure
   shadows removed, 8px radius.
+  - _Revision 2026-09-29 (user review):_ the six stacked sections became a 3×2 card
+    grid (2 columns on tablets, 1 on phones), rendered by
+    `_includes/research_grid.liquid` from `_data/research_areas.yml`, which now also
+    holds each area's papers and, where it differs from the homepage text, a longer
+    `detail` description. Each card keeps its anchor id. The six figures were redrawn
+    as flat SVGs in one style (UCLA palette, no text).
 - **News page**: same list style as the homepage news (shared include).
 - **Blog, posts, CV, 404**: inherit fonts and colors; CV PDF button in UCLA Blue.
 - **Footer** (`_includes/footer.liquid`, `_sass/_footer.scss`): `footer_fixed: false`;
