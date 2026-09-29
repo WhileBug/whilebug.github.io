@@ -162,9 +162,26 @@ def check_links():
         expect(False, f"broken internal link: {item}")
 
 
+def check_nav():
+    svg = SITE / "assets/img/logos/ucla-wordmark-white.svg"
+    expect(svg.exists() and svg.read_text().count("<path") == 4, "UCLA wordmark SVG missing or not the 4-path original")
+    css = read_site("assets/css/main.css").replace(" ", "")
+    expect(re.search(r"\.brand-ucla\{[^}]*background-color:#2774ae", css) is not None, "UCLA box is not fixed UCLA Blue")
+    for page in ("index.html", "publications/index.html", "cv/index.html"):
+        html = read_site(page)
+        brand = between(html, 'class="navbar-brand brand"', "</div>")
+        expect("brand-ucla" in brand and "ucla-wordmark-white.svg" in brand, f"{page}: navbar brand has no UCLA box")
+        expect("Peiran Wang" in brand, f"{page}: navbar brand does not show 'Peiran Wang'")
+        expect("brand-lab" not in brand, f"{page}: lab logo rendered although lab_logo is unset")
+        labels = nav_labels(html)
+        expect(labels == ["Publications", "Research", "Blog", "CV"], f"{page}: nav labels are {labels}")
+        expect('<progress id="progress"' not in html, f"{page}: scroll progress bar still rendered")
+
+
 GROUPS = {
     "tokens": check_tokens,
     "links": check_links,
+    "nav": check_nav,
 }
 
 

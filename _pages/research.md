@@ -1,6 +1,6 @@
 ---
 layout: page
-title: research
+title: Research
 permalink: /research/
 description: Our research spans six key areas in AI security.
 nav: true
@@ -8,6 +8,7 @@ nav_order: 2
 ---
 
 ## AI Agent Security
+
 {: #ai-agent-security}
 
 <div style="text-align: center;">
@@ -22,6 +23,7 @@ Securing autonomous AI agents against adversarial manipulation, prompt injection
 ---
 
 ## Interpretable AI Security
+
 {: #interpretable-ai-security}
 
 <div style="text-align: center;">
@@ -35,6 +37,7 @@ Leveraging interpretability and explainability techniques to understand, diagnos
 ---
 
 ## Usable Security of AI
+
 {: #usable-security-of-ai}
 
 <div style="text-align: center;">
@@ -48,6 +51,7 @@ Designing intuitive security mechanisms and interfaces that help users safely in
 ---
 
 ## AI Misuse Measurement
+
 {: #ai-misuse-measurement}
 
 <div style="text-align: center;">
@@ -60,6 +64,7 @@ Understanding and measuring how AI is being misused in the wild, from MCP server
 ---
 
 ## AI Society Security
+
 {: #ai-society-security}
 
 <div style="text-align: center;">
@@ -72,6 +77,7 @@ Studying the safety implications of deploying AI as participants in social netwo
 ---
 
 ## AI for Security
+
 {: #ai-for-security}
 
 <div style="text-align: center;">
