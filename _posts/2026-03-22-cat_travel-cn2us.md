@@ -6,6 +6,7 @@ description: 如何从国内带猫来美国：记一次带猫出国记录
 tags: cat
 categories: life
 related_posts: false
+published: false # temporarily hidden; delete this line to publish again
 ---
 
 这篇博客记录了一次本人带猫从国内飞美国的记录。以此记录一下我的猫猫咪咪来美国的经历，以及给朋友们提供教程。
