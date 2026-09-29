@@ -64,3 +64,9 @@ h3,
 .post figure img.rounded {
   border-radius: 8px !important;
 }
+
+// Publications filter highlight: dark text on gold stays readable in both themes
+::highlight(search) {
+  background-color: var(--global-accent-color);
+  color: #1f2933;
+}

@@ -129,6 +129,30 @@ def check_tokens():
         theme = tokens.get("--global-theme-color", "").strip().lower()
         expect(theme in ("#2774ae", "#8bb8e8"), f"{mode}: theme color is not UCLA blue ({theme})")
         expect("#b509ac" not in "".join(tokens.values()).lower(), f"{mode}: al-folio purple is still in the tokens")
+        # Text drawn on the theme color (active dropdown/pagination items) must stay readable.
+        on_theme = tokens.get("--global-hover-text-color", "").strip()
+        if on_theme.startswith("#") and theme.startswith("#"):
+            ratio = contrast(on_theme, theme)
+            expect(ratio >= 4.5, f"{mode}: --global-hover-text-color {on_theme} on {theme} has contrast {ratio:.2f} < 4.5")
+        else:
+            expect(False, f"{mode}: --global-hover-text-color missing or not hex ({on_theme!r})")
+        # The publications filter highlight; the last ::highlight(search) rule wins.
+        highlight = re.findall(r"::highlight\(search\)\{([^}]*)\}", css)
+        decl = dict(re.findall(r"([\w-]+)\s*:\s*([^;]+)", highlight[-1])) if highlight else {}
+
+        def resolve(value):
+            m = re.fullmatch(r"var\((--[\w-]+)\)", value.strip())
+            return tokens.get(m.group(1), "").strip() if m else value.strip()
+
+        fg, hl_bg = resolve(decl.get("color", "")), resolve(decl.get("background-color", ""))
+        if fg.startswith("#") and hl_bg.startswith("#"):
+            ratio = contrast(fg, hl_bg)
+            expect(ratio >= 4.5, f"{mode}: search highlight {fg} on {hl_bg} has contrast {ratio:.2f} < 4.5")
+        else:
+            expect(False, f"{mode}: search highlight colors not resolvable ({decl})")
+    active_page = re.findall(r"\.active \.page-link\{([^}]*)\}", css)
+    # purgecss drops the rule in production while the blog has no pagination; only check it when present.
+    expect(all("color:#fff" not in r for r in active_page), "active pagination item hard-codes white text")
 
 
 # Broken before the redesign (origin/main 89b49bd): template tags/categories shown on the
