@@ -205,7 +205,8 @@ def check_nav():
         expect("Peiran Wang" in brand, f"{page}: navbar brand does not show 'Peiran Wang'")
         expect("brand-lab" not in brand, f"{page}: lab logo rendered although lab_logo is unset")
         labels = nav_labels(html)
-        expect(labels == ["Publications", "Research", "Blog", "CV"], f"{page}: nav labels are {labels}")
+        # Blog is hidden from the navbar while it has no published posts (_pages/blog.md nav: false).
+        expect(labels == ["Publications", "Research", "CV"], f"{page}: nav labels are {labels}")
         expect('<progress id="progress"' not in html, f"{page}: scroll progress bar still rendered")
 
 

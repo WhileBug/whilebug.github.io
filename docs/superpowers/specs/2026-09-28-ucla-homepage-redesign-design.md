@@ -100,6 +100,8 @@ Implementation: set the al-folio CSS variables in `_sass/_themes.scss`
   blog 3, cv 4 in the pages' front matter. The separate "about" item is removed because
   the brand links home. Search and the
   light/dark toggle stay at the far right.
+  - _Revision 2026-09-29 (user review):_ Blog is hidden from the navbar (`nav: false`)
+    while its only post is unpublished; the `/blog/` page itself still exists.
 - Active page: 3px gold underline. Hover: UCLA Blue.
 - Fixed to the top, white background (dark: page background), 1px bottom hairline,
   no shadow. Mobile keeps al-folio's collapse toggle.
