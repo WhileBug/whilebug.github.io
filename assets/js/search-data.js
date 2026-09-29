@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
-        },{id: "nav-blog",
-          title: "Blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
         },{id: "nav-cv",
           title: "CV",
           description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
@@ -37,18 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-猫猫咪咪出国记",
-        
-          title: "猫猫咪咪出国记",
-        
-        description: "如何从国内带猫来美国：记一次带猫出国记录",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/cat_travel-cn2us/";
-          
-        },
-      },{id: "books-the-godfather",
+        },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
