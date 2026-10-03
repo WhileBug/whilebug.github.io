@@ -30,6 +30,12 @@ h3,
   font-weight: 700;
 }
 
+// MDB sets strong to 500, which Lato does not have (it falls back to 400)
+strong,
+b {
+  font-weight: 700;
+}
+
 // News: date | text rows separated by hairlines (homepage and /news/)
 .news table {
   width: 100%;

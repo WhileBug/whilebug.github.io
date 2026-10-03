@@ -110,6 +110,8 @@ def check_tokens():
     expect("Roboto+Slab" not in index and "Source+Serif" not in index and "family=Inter" not in index, "an old font is still loaded")
     expect("Lato" in css, "main.css does not set the Lato family")
     expect("Source Serif" not in css and '"Inter"' not in css, "main.css still references Source Serif 4 / Inter")
+    # MDB sets strong{font-weight:500}; Lato has no 500, so bold text would fall back to 400.
+    expect(re.search(r"(?:^|\})(?:strong,b|b,strong)\{[^}]*font-weight:700", css) is not None, "strong/b are not set to Lato bold (700)")
     expect(css_vars(css, r":root").get("--global-heading-color", "").strip().lower() == "#252525", "light headings are not yrbding dark grey #252525")
     for mode, selector in (("light", r":root"), ("dark", r"html\[data-theme=[\"']?dark[\"']?\]")):
         tokens = css_vars(css, selector)
@@ -146,6 +148,13 @@ def check_tokens():
             m = re.fullmatch(r"var\((--[\w-]+)\)", value.strip())
             return tokens.get(m.group(1), "").strip() if m else value.strip()
 
+        callout_fg = tokens.get("--global-callout-text", "").strip()
+        callout_bg = tokens.get("--global-callout-bg", "").strip()
+        if callout_fg.startswith("#") and callout_bg.startswith("#"):
+            ratio = contrast(callout_fg, callout_bg)
+            expect(ratio >= 4.5, f"{mode}: callout text {callout_fg} on {callout_bg} has contrast {ratio:.2f} < 4.5")
+        else:
+            expect(False, f"{mode}: callout tokens missing ({callout_fg!r}, {callout_bg!r})")
         fg, hl_bg = resolve(decl.get("color", "")), resolve(decl.get("background-color", ""))
         if fg.startswith("#") and hl_bg.startswith("#"):
             ratio = contrast(fg, hl_bg)
@@ -235,8 +244,13 @@ def check_home():
     pubs = home_section(html, "publications").count('<div class="title">')
     expect(pubs == selected, f"homepage shows {pubs} selected papers, papers.bib marks {selected}")
     expect(html.count('class="org-icon"') == 2, "bio should carry 2 inline org icons (UCLA, Sichuan University)")
+    bio_end = html.find('<div class="home-bio')
+    callout = html.find('class="home-callout"')
+    news = html.find('data-home-section="news"')
+    expect(bio_end < callout < news, "internship callout is not between the bio and News")
+    expect("Summer 2027" in between(html, 'class="home-callout"', "</p>"), "internship callout does not mention Summer 2027")
     css = read_site("assets/css/main.css")
-    for rule in (".hero{", ".hero-photo", ".section-title", ".home-section", ".org-icon{"):
+    for rule in (".hero{", ".hero-photo", ".section-title", ".home-section", ".org-icon{", ".home-callout{", ".home-callout strong{"):
         expect(rule in css, f"main.css is missing the homepage rule {rule!r}")
     # jekyll-minifier (production) rewrites calc(-a - b) as calc( - a - b), which browsers drop.
     broken_calc = sorted(set(re.findall(r"calc\(\s*-\s[^)]*\)", css)))
@@ -336,6 +350,19 @@ def check_research():
         expect(shown == papers, f"{anchor}: card lists {shown} papers, research_areas.yml has {papers}")
 
 
+def check_favicon():
+    """Bruin white-hat favicon: SVG for modern browsers, PNG fallback, iOS home-screen icon."""
+    head = between(read_site("index.html"), "<head", "</head>")
+    for rel, href in (
+        ("icon", "/assets/img/favicon.svg"),
+        ("icon", "/assets/img/favicon-32.png"),
+        ("apple-touch-icon", "/assets/img/apple-touch-icon.png"),
+    ):
+        expect(re.search(rf'<link[^>]*rel="{rel}"[^>]*href="{re.escape(href)}', head) is not None, f"head has no {rel} link to {href}")
+        expect((SITE / href.lstrip("/")).exists(), f"{href} is not in the built site")
+    expect("site.icon" not in head and "⚛" not in head, "old emoji favicon still in the head")
+
+
 GROUPS = {
     "tokens": check_tokens,
     "links": check_links,
@@ -345,6 +372,7 @@ GROUPS = {
     "pubs": check_pubs,
     "pages": check_pages,
     "research": check_research,
+    "favicon": check_favicon,
 }
 
 

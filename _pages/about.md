@@ -17,6 +17,11 @@ profile:
         - text: UCLA Security Lab
           url: https://ucla-sec.com/
 
+# Highlighted line under the bio; delete to hide it.
+callout: >-
+  I am actively seeking <strong>Summer 2027</strong> research internship opportunities in AI security
+  and LLM agents. Feel free to <a href="mailto:whilebug@gmail.com">reach out</a>!
+
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # shows the icons from _data/socials.yml under the hero
 awards: true # Honors & Awards from _data/cv.yml

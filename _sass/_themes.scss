@@ -15,6 +15,8 @@
   --global-heading-color: #252525;
   --global-accent-color: #ffd100;
   --global-award-color: #8a6500;
+  --global-callout-bg: #f2f6fa;
+  --global-callout-text: #005587;
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
@@ -88,6 +90,8 @@ html[data-theme="dark"] {
   --global-heading-color: #e8eaed;
   --global-accent-color: #ffd100;
   --global-award-color: #ffd100;
+  --global-callout-bg: #132636;
+  --global-callout-text: #8bb8e8;
   --global-hover-text-color: #0f1c27;
   --global-footer-bg-color: #{v.$grey-color-light};
   --global-footer-text-color: #{v.$grey-color-dark};

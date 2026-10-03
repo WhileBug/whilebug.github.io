@@ -7,6 +7,13 @@ layout: default
   <article>
     <div class="home-bio clearfix">{{ content }}</div>
 
+    {% if page.callout %}
+      <p class="home-callout">
+        <span aria-hidden="true">🧭</span>
+        <span>{{ page.callout }}</span>
+      </p>
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <section class="home-section" data-home-section="news">

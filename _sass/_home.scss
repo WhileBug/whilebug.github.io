@@ -160,3 +160,35 @@
   margin-right: 0.5rem;
   vertical-align: -0.25em;
 }
+
+// Highlighted line under the bio (about.md `callout`), e.g. internship search
+.home-callout {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 1.25rem 0 0;
+  padding: 0.7rem 1rem;
+  border-left: 4px solid var(--global-accent-color);
+  border-radius: 0 6px 6px 0;
+  background-color: var(--global-callout-bg);
+  color: var(--global-callout-text);
+  font-weight: 700;
+
+  span,
+  strong,
+  a {
+    color: inherit;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  // the key phrase (e.g. "Summer 2027") gets a gold underline
+  strong {
+    text-decoration: underline;
+    text-decoration-color: var(--global-accent-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+  }
+}

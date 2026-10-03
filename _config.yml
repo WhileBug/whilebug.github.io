@@ -14,7 +14,9 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: academic, computer-science, security, machine-learning, ai-security # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # Bruin white-hat hacker; an emoji also works, or an image name in /assets/img/
+icon_png: favicon-32.png # PNG fallback for browsers without SVG favicons
+apple_touch_icon: apple-touch-icon.png # iOS home-screen icon (180x180, square)
 
 url: https://whilebug.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root

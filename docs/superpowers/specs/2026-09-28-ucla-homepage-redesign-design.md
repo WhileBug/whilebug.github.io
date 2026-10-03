@@ -191,6 +191,19 @@ text; the "All news →" / "Full list →" links sit at the right end of the tit
   - No broken internal links (crawl `_site`).
   - Text contrast at least 4.5:1; gold never used for body text.
 
+## Revision 2026-10-02 (user review)
+
+- **Internship callout:** a highlighted line under the homepage bio (about.md `callout`),
+  styled after y1ngli.github.io: gold left bar, pale UCLA-blue background
+  (`--global-callout-bg` / `--global-callout-text`, ≥4.5:1 in both themes), key phrase
+  with a gold underline. Delete `callout` to hide it.
+- **Favicon:** the al-folio ⚛️ emoji is replaced by a Bruin white-hat hacker (hood with
+  bear ears, gold-rimmed sunglasses, gold shield) as `assets/img/favicon.svg`, plus a
+  32px PNG fallback and a 180px square `apple-touch-icon.png` (`icon`, `icon_png`,
+  `apple_touch_icon` in `_config.yml`).
+- **Bold text:** `strong`/`b` are set to 700; MDB's `strong { font-weight: 500 }` fell back
+  to Lato 400 after the font switch.
+
 ## Open Items
 
 - **Lab logo**: the lab (UCLA Security Lab) is choosing a new name and logo in its own
