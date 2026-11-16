@@ -147,6 +147,85 @@
             color: var(--global-hover-color);
             text-decoration: underline;
           }
+
+          // Brand-colored icon inside the [ ] text link; text stays UCLA Blue
+          i {
+            --link-brand: var(--global-theme-color);
+            color: var(--link-brand);
+            font-size: 0.95em;
+            margin: 0 0.25em 0 0;
+          }
+        }
+
+        a.btn-arxiv i {
+          --link-brand: #b31b1b;
+        }
+        a.btn-openreview i {
+          --link-brand: #8c1b13;
+        }
+        a.btn-acl i {
+          --link-brand: #ed1c24;
+        }
+        a.btn-ieee i {
+          --link-brand: #00629b;
+        }
+        a.btn-acm i {
+          --link-brand: #0085ca;
+        }
+        a.btn-elsevier i {
+          --link-brand: #ff6c00;
+        }
+        a.btn-springer i {
+          --link-brand: #00285a;
+        }
+        a.btn-pdf i {
+          --link-brand: #e2574c;
+        }
+        a.btn-code i {
+          --link-brand: var(--global-text-color);
+        }
+        a.btn-doi i {
+          --link-brand: #fcb425;
+        }
+        a.btn-bib i {
+          --link-brand: #2a9d8f;
+        }
+        a.btn-abs i {
+          --link-brand: var(--global-text-color-light);
+        }
+        a.btn-s2 i {
+          --link-brand: #1857b6;
+        }
+        a.btn-dblp i {
+          --link-brand: #004f9f;
+        }
+        a.btn-video i {
+          --link-brand: #ff0000;
+        }
+
+        // Lighter variants so the darker brand colors stay visible on the dark background
+        html[data-theme="dark"] & {
+          a.btn-arxiv i {
+            --link-brand: #e5605f;
+          }
+          a.btn-openreview i {
+            --link-brand: #e07a6f;
+          }
+          a.btn-ieee i {
+            --link-brand: #4fa3d9;
+          }
+          a.btn-acm i {
+            --link-brand: #4fb3e8;
+          }
+          a.btn-springer i {
+            --link-brand: #6f9bd8;
+          }
+          a.btn-s2 i {
+            --link-brand: #5b93e6;
+          }
+          a.btn-dblp i {
+            --link-brand: #5b9be0;
+          }
         }
       }
 
@@ -168,6 +247,10 @@
         .cited-by {
           color: var(--global-text-color-light);
           font-size: 0.85rem;
+
+          i {
+            color: #4285f4;
+          }
         }
       }
 

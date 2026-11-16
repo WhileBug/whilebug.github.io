@@ -1,0 +1,143 @@
+{% comment %}
+  Publication link buttons, each with an icon.
+  Rendered inside _layouts/bib.liquid; buttons must stay direct children of div.links
+  because assets/js/common.js toggles hidden blocks via $(this).parent().parent().
+
+  Supported bib fields (besides al-folio's defaults):
+  - openreview: forum id (e.g. Fcf5fLmaeG) or full URL
+  - semantic_scholar: paper id / corpus URL or full URL
+  - dblp: full URL or record key (e.g. conf/ccs/WangLYWLJ24)
+  Google Scholar (google_scholar_id) is rendered as "Cited by N" in the badges row of bib.liquid.
+{% endcomment %}
+{% assign e = include.entry | default: entry %}
+<div class="links">
+  {% if e.abstract %}
+    <a class="abstract btn btn-sm z-depth-0 btn-abs" role="button"><i class="fa-solid fa-align-left"></i>Abs</a>
+  {% endif %}
+  {% if e.arxiv %}
+    <a href="https://arxiv.org/abs/{{ e.arxiv }}" class="btn btn-sm z-depth-0 btn-arxiv" role="button"><i class="ai ai-arxiv"></i>arXiv</a>
+  {% endif %}
+  {% if e.openreview %}
+    {% if e.openreview contains '://' %}
+      {% assign openreview_url = e.openreview %}
+    {% else %}
+      {% assign openreview_url = e.openreview | prepend: 'https://openreview.net/forum?id=' %}
+    {% endif %}
+    <a href="{{ openreview_url }}" class="btn btn-sm z-depth-0 btn-openreview" role="button"><i class="fa-solid fa-comments"></i>OpenReview</a>
+  {% endif %}
+  {% if e.html %}
+    {% if e.html contains '://' %}
+      {% assign html_url = e.html %}
+    {% else %}
+      {% assign html_url = e.html | prepend: '/assets/html/' | relative_url %}
+    {% endif %}
+    {% comment %} Pick the icon from the host so publisher pages are recognizable at a glance {% endcomment %}
+    {% assign html_icon = 'fa-solid fa-globe' %}
+    {% assign html_class = 'btn-html' %}
+    {% if html_url contains 'arxiv.org' %}
+      {% assign html_icon = 'ai ai-arxiv' -%}
+      {%- assign html_class = 'btn-arxiv' %}
+    {% elsif html_url contains 'openreview.net' %}
+      {% assign html_icon = 'fa-solid fa-comments' -%}
+      {%- assign html_class = 'btn-openreview' %}
+    {% elsif html_url contains 'aclanthology.org' %}
+      {% assign html_icon = 'fa-solid fa-book-open' -%}
+      {%- assign html_class = 'btn-acl' %}
+    {% elsif html_url contains 'ieeexplore.ieee.org' or html_url contains 'computer.org' %}
+      {% assign html_icon = 'ai ai-ieee' -%}
+      {%- assign html_class = 'btn-ieee' %}
+    {% elsif html_url contains 'dl.acm.org' %}
+      {% assign html_icon = 'ai ai-acm' -%}
+      {%- assign html_class = 'btn-acm' %}
+    {% elsif html_url contains 'sciencedirect.com' %}
+      {% assign html_icon = 'ai ai-elsevier' -%}
+      {%- assign html_class = 'btn-elsevier' %}
+    {% elsif html_url contains 'springer' %}
+      {% assign html_icon = 'ai ai-springer' -%}
+      {%- assign html_class = 'btn-springer' %}
+    {% elsif html_url contains 'thecvf.com' or html_url contains 'aaai.org' or html_url contains 'ijcai.org' %}
+      {% assign html_icon = 'fa-solid fa-book-open' %}
+    {% endif %}
+    <a href="{{ html_url }}" class="btn btn-sm z-depth-0 {{ html_class }}" role="button"><i class="{{ html_icon }}"></i>HTML</a>
+  {% endif %}
+  {% if e.pdf %}
+    {% if e.pdf contains '://' %}
+      <a href="{{ e.pdf }}" class="btn btn-sm z-depth-0 btn-pdf" role="button"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+    {% else %}
+      <a href="{{ e.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0 btn-pdf" role="button"
+        ><i class="fa-solid fa-file-pdf"></i>PDF</a
+      >
+    {% endif %}
+  {% endif %}
+  {% if e.code %}
+    {% if e.code contains 'github.com' %}
+      <a href="{{ e.code }}" class="btn btn-sm z-depth-0 btn-code" role="button"><i class="fa-brands fa-github"></i>Code</a>
+    {% else %}
+      <a href="{{ e.code }}" class="btn btn-sm z-depth-0 btn-code" role="button"><i class="fa-solid fa-code"></i>Code</a>
+    {% endif %}
+  {% endif %}
+  {% if e.supp %}
+    {% if e.supp contains '://' %}
+      <a href="{{ e.supp }}" class="btn btn-sm z-depth-0 btn-supp" role="button"><i class="fa-solid fa-paperclip"></i>Supp</a>
+    {% else %}
+      <a href="{{ e.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0 btn-supp" role="button"
+        ><i class="fa-solid fa-paperclip"></i>Supp</a
+      >
+    {% endif %}
+  {% endif %}
+  {% if e.video and site.enable_video_embedding %}
+    <a class="abstract btn btn-sm z-depth-0 btn-video" role="button"><i class="fa-solid fa-video"></i>Video</a>
+  {% elsif e.video %}
+    <a href="{{ e.video }}" class="btn btn-sm z-depth-0 btn-video" role="button"><i class="fa-solid fa-video"></i>Video</a>
+  {% endif %}
+  {% if e.poster %}
+    {% if e.poster contains '://' %}
+      <a href="{{ e.poster }}" class="btn btn-sm z-depth-0 btn-poster" role="button"><i class="fa-solid fa-image"></i>Poster</a>
+    {% else %}
+      <a href="{{ e.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0 btn-poster" role="button"
+        ><i class="fa-solid fa-image"></i>Poster</a
+      >
+    {% endif %}
+  {% endif %}
+  {% if e.slides %}
+    {% if e.slides contains '://' %}
+      <a href="{{ e.slides }}" class="btn btn-sm z-depth-0 btn-slides" role="button"><i class="fa-solid fa-person-chalkboard"></i>Slides</a>
+    {% else %}
+      <a href="{{ e.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0 btn-slides" role="button"
+        ><i class="fa-solid fa-person-chalkboard"></i>Slides</a
+      >
+    {% endif %}
+  {% endif %}
+  {% if e.blog %}
+    <a href="{{ e.blog }}" class="btn btn-sm z-depth-0 btn-blog" role="button"><i class="fa-solid fa-pen-nib"></i>Blog</a>
+  {% endif %}
+  {% if e.website %}
+    <a href="{{ e.website }}" class="btn btn-sm z-depth-0 btn-website" role="button"><i class="fa-solid fa-house"></i>Website</a>
+  {% endif %}
+  {% comment %} DOI resolves to the same publisher page as HTML, so only show it when there is no HTML link {% endcomment %}
+  {% if e.doi and e.html == null %}
+    <a href="https://doi.org/{{ e.doi }}" class="btn btn-sm z-depth-0 btn-doi" role="button"><i class="ai ai-doi"></i>DOI</a>
+  {% endif %}
+  {% if e.hal %}
+    <a href="https://hal.science/{{ e.hal }}" class="btn btn-sm z-depth-0 btn-hal" role="button"><i class="ai ai-hal"></i>HAL</a>
+  {% endif %}
+  {% if e.bibtex_show %}
+    <a class="bibtex btn btn-sm z-depth-0 btn-bib" role="button"><i class="fa-solid fa-quote-left"></i>Bib</a>
+  {% endif %}
+  {% if e.semantic_scholar %}
+    {% if e.semantic_scholar contains '://' %}
+      {% assign s2_url = e.semantic_scholar %}
+    {% else %}
+      {% assign s2_url = e.semantic_scholar | prepend: 'https://www.semanticscholar.org/paper/' %}
+    {% endif %}
+    <a href="{{ s2_url }}" class="btn btn-sm z-depth-0 btn-s2" role="button"><i class="ai ai-semantic-scholar"></i>Semantic Scholar</a>
+  {% endif %}
+  {% if e.dblp %}
+    {% if e.dblp contains '://' %}
+      {% assign dblp_url = e.dblp %}
+    {% else %}
+      {% assign dblp_url = e.dblp | prepend: 'https://dblp.org/rec/' | append: '.html' %}
+    {% endif %}
+    <a href="{{ dblp_url }}" class="btn btn-sm z-depth-0 btn-dblp" role="button"><i class="ai ai-dblp"></i>DBLP</a>
+  {% endif %}
+</div>
