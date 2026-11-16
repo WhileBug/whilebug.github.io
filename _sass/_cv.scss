@@ -83,6 +83,165 @@ div.container-links {
 }
 
 /*****************************
+ * CV entry: [logo] [title / organization]
+ *****************************/
+
+$cv-logo-size: 3.25rem;
+$cv-logo-gap: 0.9rem;
+
+.cv-entry {
+  display: flex;
+  align-items: center;
+  gap: $cv-logo-gap;
+}
+
+.cv-logo {
+  flex: 0 0 $cv-logo-size;
+  width: $cv-logo-size;
+  height: $cv-logo-size;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // White tile keeps dark/black logos (e.g. NVIDIA wordmark) readable in dark mode.
+  background: #fff;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.cv-entry-titles {
+  flex: 1 1 auto;
+  min-width: 0;
+
+  h6 {
+    margin-bottom: 0.15rem;
+  }
+
+  h6:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h6.cv-org {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+h6.cv-entry-sub {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+// Highlights / summary line up under the text column, not under the logo.
+.cv-entry-details {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  margin-left: calc(#{$cv-logo-size} + #{$cv-logo-gap} + 0.25rem);
+}
+
+@media (min-width: 768px) {
+  .cv-entry-details {
+    margin-left: calc(#{$cv-logo-size} + #{$cv-logo-gap} + 1.5rem);
+  }
+}
+
+/*****************************
+ * Organization brand colors
+ * Class is derived from the logo file name (badges/UCLA.png -> .org-ucla)
+ * or from an explicit `brand:` field in _data/cv.yml.
+ *****************************/
+
+.cv-org-name {
+  --org-gradient: linear-gradient(90deg, var(--global-text-color), var(--global-text-color));
+  background-image: var(--org-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@mixin org-brand($light, $dark) {
+  --org-gradient: #{$light};
+
+  html[data-theme="dark"] & {
+    --org-gradient: #{$dark};
+  }
+}
+
+@function solid($c) {
+  @return linear-gradient(90deg, $c, $c);
+}
+
+// UCLA Blue #2774AE -> UCLA Gold (#FFB81C / #FFD100)
+.org-ucla {
+  @include org-brand(linear-gradient(90deg, #2774ae 0%, #2774ae 30%, #f2a900 100%), linear-gradient(90deg, #8bb8e8 0%, #8bb8e8 30%, #ffd100 100%));
+}
+// UC San Diego Navy #182B49 -> Gold #C69214
+.org-ucsd {
+  @include org-brand(linear-gradient(90deg, #182b49 0%, #00629b 45%, #c69214 100%), linear-gradient(90deg, #6a9ad4 0%, #6a9ad4 35%, #ffcd00 100%));
+}
+// Illini Blue #13294B -> Illini Orange #FF5F05
+.org-uiuc {
+  @include org-brand(linear-gradient(90deg, #13294b 0%, #13294b 35%, #ff5f05 100%), linear-gradient(90deg, #9bb0d8 0%, #9bb0d8 35%, #ff5f05 100%));
+}
+// Badger Red #C5050C
+.org-uwisc {
+  @include org-brand(solid(#c5050c), solid(#ef4b51));
+}
+// NVIDIA Green #76B900
+.org-nvidia {
+  @include org-brand(solid(#5e9400), solid(#76b900));
+}
+// ByteDance logo blues / teal
+.org-bytedance {
+  @include org-brand(linear-gradient(90deg, #325ab4 0%, #3c8cff 50%, #00c8d2 100%), linear-gradient(90deg, #5a8cf0 0%, #78e6dc 100%));
+}
+// Baidu blue #2932E1 / red #E10601
+.org-baidu {
+  @include org-brand(linear-gradient(90deg, #2932e1 0%, #2932e1 40%, #e10601 100%), linear-gradient(90deg, #7a80ff 0%, #7a80ff 40%, #ff5a52 100%));
+}
+// Microsoft four-color logo
+.org-microsoft {
+  @include org-brand(
+    linear-gradient(90deg, #f25022 0%, #f25022 20%, #7fba00 40%, #00a4ef 65%, #e0a000 100%),
+    linear-gradient(90deg, #f25022 0%, #f25022 20%, #7fba00 40%, #00a4ef 65%, #ffb900 100%)
+  );
+}
+// Future Capital navy -> cyan (from logo)
+.org-future {
+  @include org-brand(linear-gradient(90deg, #0b1f4b 0%, #00a0c8 100%), linear-gradient(90deg, #6f95e8 0%, #00c2e0 100%));
+}
+// Sichuan University red
+.org-scu {
+  @include org-brand(solid(#c41e1e), solid(#f0625a));
+}
+// Tsinghua purple
+.org-thu {
+  @include org-brand(solid(#660874), solid(#c48ad6));
+}
+// Peking University red
+.org-pku-red {
+  @include org-brand(solid(#94070a), solid(#e35d60));
+}
+// ACM blue
+.org-acm {
+  @include org-brand(solid(#0085ca), solid(#4fb3e8));
+}
+// IEEE blue
+.org-ieee {
+  @include org-brand(solid(#00629b), solid(#4fa3d9));
+}
+
+/*****************************
  * CV MAP styles
  *****************************/
 

@@ -1,0 +1,11 @@
+{% comment %}
+  Enlarged organization logo tile shown to the left of a CV entry's title block.
+  Params:
+  - logo: path relative to /assets/img/ (e.g. badges/UCLA.png)
+  - alt: alt text (organization name)
+{% endcomment %}
+{% if include.logo %}
+  <div class="cv-logo">
+    <img src="{{ include.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ include.alt | strip }}" loading="lazy">
+  </div>
+{% endif %}

@@ -9,8 +9,11 @@
         {% capture start_date %}
           {% if entry.date %}{{ entry.date }}{% endif %}
         {% endcapture %}
+        {% assign org_slug = entry.brand | default: entry.logo | split: '/' | last | split: '.' | first | slugify %}
 
+        {% assign body_col_class = 'col-xs-12 col-sm-12 col-md-12' %}
         {% if start_date != '' %}
+          {% assign body_col_class = 'col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0' %}
           <div class="col-xs-2 col-sm-2 col-md-2 text-center">
             <table class="table-cv">
               <tbody>
@@ -24,52 +27,31 @@
               </tbody>
             </table>
           </div>
-          <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
-            {% if entry.url %}
-              <h6 class="title font-weight-bold ml-1 ml-md-4">
-                <a href="{{ entry.url }}">{{ entry.title }}</a>
-              </h6>
-            {% elsif entry.title %}
-              <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
-            {% endif %}
-
-            {% if entry.awarder %}
-              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
-                {% if entry.logo %}
-                  <img src="{{ entry.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ entry.awarder }}" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 4px;">
-                {% endif %}
-                {{ entry.awarder }}
-              </h6>
-            {% endif %}
-
-            {% if entry.summary %}
-              <p class="ml-1 ml-md-4">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-            {% endif %}
-          </div>
-        {% else %}
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            {% if entry.url %}
-              <h6 class="title font-weight-bold ml-1 ml-md-4">
-                <a href="{{ entry.url }}">{{ entry.title }}</a>
-              </h6>
-            {% elsif entry.title %}
-              <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
-            {% endif %}
-
-            {% if entry.awarder %}
-              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
-                {% if entry.logo %}
-                  <img src="{{ entry.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ entry.awarder }}" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 4px;">
-                {% endif %}
-                {{ entry.awarder }}
-              </h6>
-            {% endif %}
-
-            {% if entry.summary %}
-              <p class="ml-1 ml-md-4">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-            {% endif %}
-          </div>
         {% endif %}
+        <div class="{{ body_col_class }}">
+          <div class="cv-entry ml-1 ml-md-4">
+            {% include cv/org_logo.liquid logo=entry.logo alt=entry.awarder %}
+            <div class="cv-entry-titles">
+              {% if entry.url %}
+                <h6 class="title font-weight-bold">
+                  <a href="{{ entry.url }}">{{ entry.title }}</a>
+                </h6>
+              {% elsif entry.title %}
+                <h6 class="title font-weight-bold">{{ entry.title }}</h6>
+              {% endif %}
+
+              {% if entry.awarder %}
+                <h6 class="cv-org">
+                  <span class="cv-org-name org-{{ org_slug }}">{{ entry.awarder }}</span>
+                </h6>
+              {% endif %}
+            </div>
+          </div>
+
+          {% if entry.summary %}
+            <p class="cv-entry-details">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+          {% endif %}
+        </div>
       </div>
     </li>
   {% endfor %}
