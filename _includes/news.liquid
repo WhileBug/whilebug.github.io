@@ -19,7 +19,41 @@
             <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
             <td>
               {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {% assign news_text = item.content | remove: '<p>' | remove: '</p>' | emojify | strip %}
+                {% assign news_lower = news_text | downcase %}
+                {% comment %} Pick a colored icon from the news wording (display only) {% endcomment %}
+                {% assign news_kind = 'note' %}
+                {% assign news_icon = 'fa-solid fa-bullhorn' %}
+                {% if news_lower contains 'award' %}
+                  {% assign news_kind = 'award' %}
+                  {% assign news_icon = 'fa-solid fa-trophy' %}
+                {% elsif news_lower contains 'offer' %}
+                  {% assign news_kind = 'offer' %}
+                  {% assign news_icon = 'fa-solid fa-champagne-glasses' %}
+                {% elsif news_lower contains 'accepted' %}
+                  {% assign news_kind = 'paper' %}
+                  {% assign news_icon = 'fa-solid fa-file-circle-check' %}
+                {% elsif news_lower contains 'arxiv' or news_lower contains 'preprint' %}
+                  {% assign news_kind = 'preprint' %}
+                  {% assign news_icon = 'fa-solid fa-scroll' %}
+                {% elsif news_lower contains 'ph.d' %}
+                  {% assign news_kind = 'phd' %}
+                  {% assign news_icon = 'fa-solid fa-graduation-cap' %}
+                {% elsif news_lower contains 'internship' %}
+                  {% assign news_kind = 'intern' %}
+                  {% assign news_icon = 'fa-solid fa-briefcase' %}
+                {% elsif news_lower contains 'selected' or news_lower contains 'challenge' %}
+                  {% assign news_kind = 'milestone' %}
+                  {% assign news_icon = 'fa-solid fa-rocket' %}
+                {% endif %}
+                {% for brand in site.data.news_logos %}
+                  {% if news_text contains brand.term %}
+                    {% capture brand_html %}<img class="news-logo" src="{{ brand.logo | prepend: '/assets/img/' | relative_url }}" alt="" loading="lazy">{{ brand.term }}{% endcapture %}
+                    {% assign news_text = news_text | replace_first: brand.term, brand_html %}
+                  {% endif %}
+                {% endfor %}
+                <span class="news-icon news-{{ news_kind }}"><i class="{{ news_icon }}"></i></span>
+                {{ news_text }}
               {% else %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
               {% endif %}

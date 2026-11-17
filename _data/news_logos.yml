@@ -1,0 +1,38 @@
+# Logos inserted in front of the first match of `term` in each news item (display only;
+# the news text itself is unchanged). Paths are under assets/img/.
+- term: NVIDIA
+  logo: badges/NVIDIA.png
+- term: ByteDance
+  logo: badges/ByteDance.png
+- term: Baidu
+  logo: badges/Baidu.png
+- term: Microsoft Research Asia
+  logo: badges/Microsoft.png
+- term: CS@UCLA
+  logo: badges/UCLA.png
+- term: CCS
+  logo: badges/ACM.png
+- term: ISCC
+  logo: badges/IEEE.png
+- term: Amazon Nova
+  logo: venues/amazon.png
+- term: UCLA CS
+  logo: badges/UCLA.png
+# Venues (terms carry the year, so they never match inside link URLs)
+- term: AAAI 2025
+  logo: venues/aaai.png
+- term: NAACL 2025
+  logo: venues/acl.svg
+- term: IJCAI 2025
+  logo: venues/ijcai.png
+- term: ICCV 2025
+  logo: venues/cvf.png
+- term: ICLR 2026
+  logo: venues/iclr.png
+- term: ACL 2026
+  logo: venues/acl.svg
+- term: NeurIPS 2026
+  logo: venues/neurips.svg
+# arXiv links are lowercase (arxiv.org), so the capitalized term only matches prose
+- term: arXiv
+  logo: venues/arxiv.png
