@@ -18,7 +18,9 @@ layout: default
     {% if page.announcements and page.announcements.enabled %}
       <section class="home-section" data-home-section="news">
         <div class="section-head">
-          <h2 class="section-title">News</h2>
+          <h2 class="section-title">
+            <span class="section-icon section-icon-news"><i class="fa-solid fa-bullhorn"></i></span>News
+          </h2>
           <a class="section-more" href="{{ '/news/' | relative_url }}">All news &rarr;</a>
         </div>
         {% include news.liquid limit=true %}
@@ -29,7 +31,9 @@ layout: default
     {% if page.research_areas and page.research_areas.enabled %}
       <section class="home-section" data-home-section="research">
         <div class="section-head">
-          <h2 class="section-title">Research Interests</h2>
+          <h2 class="section-title">
+            <span class="section-icon section-icon-research"><i class="fa-solid fa-flask"></i></span>Research Interests
+          </h2>
           <a class="section-more" href="{{ '/research/' | relative_url }}">Details &rarr;</a>
         </div>
         {% include research_interests.liquid %}
@@ -40,7 +44,9 @@ layout: default
     {% if page.latest_posts and page.latest_posts.enabled %}
       <section class="home-section" data-home-section="posts">
         <div class="section-head">
-          <h2 class="section-title">Latest Posts</h2>
+          <h2 class="section-title">
+            <span class="section-icon section-icon-posts"><i class="fa-solid fa-pen-nib"></i></span>Latest Posts
+          </h2>
           <a class="section-more" href="{{ '/blog/' | relative_url }}">Blog &rarr;</a>
         </div>
         {% include latest_posts.liquid %}
@@ -51,7 +57,9 @@ layout: default
     {% if page.selected_papers %}
       <section class="home-section" data-home-section="publications">
         <div class="section-head">
-          <h2 class="section-title">Selected Publications</h2>
+          <h2 class="section-title">
+            <span class="section-icon section-icon-publications"><i class="fa-solid fa-book-open"></i></span>Selected Publications
+          </h2>
           <a class="section-more" href="{{ '/publications/' | relative_url }}">Full list &rarr;</a>
         </div>
         {% include selected_papers.liquid %}
@@ -62,7 +70,9 @@ layout: default
     {% if page.awards %}
       <section class="home-section" data-home-section="awards">
         <div class="section-head">
-          <h2 class="section-title">Honors &amp; Awards</h2>
+          <h2 class="section-title">
+            <span class="section-icon section-icon-awards"><i class="fa-solid fa-trophy"></i></span>Honors &amp; Awards
+          </h2>
         </div>
         {% include home/awards.liquid %}
       </section>
@@ -72,7 +82,9 @@ layout: default
     {% if page.experience %}
       <section class="home-section" data-home-section="experience">
         <div class="section-head">
-          <h2 class="section-title">Experience</h2>
+          <h2 class="section-title">
+            <span class="section-icon section-icon-experience"><i class="fa-solid fa-briefcase"></i></span>Experience
+          </h2>
           <a class="section-more" href="{{ '/cv/' | relative_url }}">Full CV &rarr;</a>
         </div>
         {% include home/experience.liquid %}

@@ -377,3 +377,117 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+
+/*****************************
+ * CV page polish: flat cards, gold-accented titles, soft date pills, TOC
+ *****************************/
+
+.cv {
+  .card {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 12px;
+    box-shadow: none; // drop MDB's z-depth shadow to match the flat site style
+    padding: 1.25rem 1.4rem !important;
+
+    .card-title {
+      position: relative;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--global-heading-color);
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 2.5rem;
+        height: 3px;
+        background-color: var(--global-accent-color);
+      }
+    }
+
+    .list-group-item {
+      padding-left: 0;
+      padding-right: 0;
+
+      // date range as a soft UCLA Blue pill instead of a solid block
+      .badge {
+        color: var(--global-callout-text) !important;
+        background-color: var(--global-callout-bg) !important;
+        border: 1px solid var(--global-divider-color);
+        border-radius: 999px;
+        box-shadow: none;
+        padding: 0.3em 0.7em;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: 0.01em;
+      }
+    }
+  }
+}
+
+#toc-sidebar {
+  .nav > li > a,
+  .nav-link {
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+    font-weight: 400;
+    padding: 0.3rem 0.9rem;
+    border-left: 2px solid var(--global-divider-color);
+    transition:
+      color 0.15s ease,
+      border-color 0.15s ease;
+
+    &:hover,
+    &:focus {
+      padding-left: 0.9rem;
+      color: var(--global-theme-color);
+      border-left: 2px solid var(--global-theme-color);
+    }
+  }
+
+  .nav-link.active,
+  .nav-link.active:hover,
+  .nav-link.active:focus {
+    padding-left: 0.9rem;
+    font-weight: 700;
+    color: var(--global-theme-color);
+    border-left: 2px solid var(--global-accent-color);
+  }
+}
+
+// Phones: the sidebar column stacks above the content, so show the TOC as a row of
+// pill links in normal flow (it used to float over the page title while sticky).
+@media (max-width: 575.98px) {
+  #toc-sidebar {
+    position: static !important;
+    // _utilities.scss collapses nav[data-toggle="toc"] to height 0 on phones, but its links
+    // stayed visible and overlapped the title; give the pill row its own space instead
+    visibility: visible;
+    height: auto;
+    margin: 0 0 1rem;
+
+    .nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .nav > li > a,
+    .nav-link,
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link.active {
+      padding: 0.2rem 0.75rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 999px;
+    }
+
+    .nav-link.active {
+      border-color: var(--global-accent-color);
+    }
+  }
+}

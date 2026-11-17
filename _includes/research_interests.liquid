@@ -1,8 +1,17 @@
 <ul class="interest-list">
   {% for area in site.data.research_areas %}
     <li>
-      <a href="{{ '/research/' | relative_url }}#{{ area.anchor }}">{{ area.name }}</a>
-      <span class="interest-desc">{{ area.description }}</span>
+      <a class="interest-card" href="{{ '/research/' | relative_url }}#{{ area.anchor }}">
+        {% if area.image %}
+          <span class="interest-art">
+            <img src="{{ area.image | prepend: '/assets/img/' | relative_url }}" alt="" loading="lazy">
+          </span>
+        {% endif %}
+        <span class="interest-text">
+          <span class="interest-name">{{ area.name }}</span>
+          <span class="interest-desc">{{ area.description }}</span>
+        </span>
+      </a>
     </li>
   {% endfor %}
 </ul>

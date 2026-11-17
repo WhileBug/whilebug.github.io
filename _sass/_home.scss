@@ -2,6 +2,8 @@
  * Homepage (about layout): hero, section heads
  ******************************************************************************/
 
+@use "sass:list";
+
 .hero {
   display: flex;
   align-items: flex-start;
@@ -24,19 +26,35 @@
   color: var(--global-text-color-light);
 }
 
+// Social links as equal-size rounded tiles; they fill with UCLA Blue on hover
 .hero-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 0.4rem;
-  font-size: 1.35rem;
+  gap: 0.55rem;
+  margin-top: 0.6rem;
 
   a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.15rem;
     color: var(--global-theme-color);
+    background-color: var(--global-callout-bg);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 10px;
+    transition:
+      color 0.15s ease,
+      background-color 0.15s ease,
+      transform 0.15s ease;
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-hover-text-color);
+      background-color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
       text-decoration: none;
+      transform: translateY(-2px);
     }
   }
 }
@@ -51,8 +69,12 @@
   img {
     width: 200px;
     max-width: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    border-radius: 14px;
+    border: 3px solid var(--global-bg-color);
+    // thin UCLA Gold ring plus a soft drop shadow
+    box-shadow:
+      0 0 0 2px var(--global-accent-color),
+      0 10px 24px rgba(0, 0, 0, 0.14);
   }
 }
 
@@ -125,18 +147,81 @@
   margin: 0;
 }
 
-.interest-list li {
-  padding: 0.3rem 0;
+// Research interests: 2-column cards, each with the center of its /research/ illustration
+.interest-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
 
-  a {
-    font-weight: 700;
-    margin-right: 0.35rem;
+@media (max-width: 575.98px) {
+  .interest-list {
+    grid-template-columns: 1fr;
   }
+}
 
-  .interest-desc {
-    color: var(--global-text-color-light);
-    font-size: 0.92rem;
+.interest-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  height: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  color: var(--global-text-color);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    text-decoration: none;
+    border-color: var(--global-theme-color);
+    box-shadow: 0 6px 18px rgba(39, 116, 174, 0.12);
+    transform: translateY(-2px);
   }
+}
+
+.interest-art {
+  flex: 0 0 4.25rem;
+  width: 4.25rem;
+  height: 4.25rem;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #eaf2fa; // the illustrations' own panel color
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.4); // crop to the central motif, dropping half-cut satellite icons
+    transition: transform 0.2s ease;
+  }
+}
+
+.interest-card:hover .interest-art img {
+  transform: scale(1.5);
+}
+
+.interest-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.interest-name {
+  font-weight: 700;
+  color: var(--global-theme-color);
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
+}
+
+.interest-desc {
+  color: var(--global-text-color-light);
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 .plain-list li {
@@ -153,12 +238,28 @@
   font-variant-numeric: tabular-nums;
 }
 
+.plain-list li {
+  padding: 0.4rem 0.5rem;
+  margin: 0 -0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: var(--global-callout-bg);
+  }
+}
+
+// Small logo tile; the white tile keeps dark logos (e.g. NVIDIA's black wordmark) visible in dark mode
 .org-logo {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 2px;
   object-fit: contain;
-  margin-right: 0.5rem;
-  vertical-align: -0.25em;
+  margin-right: 0.6rem;
+  vertical-align: -0.4em;
+  background: #fff;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
 }
 
 // Highlighted line under the bio (about.md `callout`), e.g. internship search
@@ -191,4 +292,119 @@
     text-decoration-thickness: 3px;
     text-underline-offset: 4px;
   }
+}
+
+// Colored icon tile in front of each homepage section title
+.section-title {
+  display: inline-flex;
+  align-items: center;
+}
+
+.section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.6rem;
+  border-radius: 9px;
+  font-size: 0.95rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--icon-from), var(--icon-to));
+  box-shadow: 0 3px 10px -2px var(--icon-from);
+}
+
+.section-icon-news {
+  --icon-from: #f97316;
+  --icon-to: #f43f5e;
+}
+.section-icon-research {
+  --icon-from: #7c3aed;
+  --icon-to: #c026d3;
+}
+.section-icon-posts {
+  --icon-from: #db2777;
+  --icon-to: #f97316;
+}
+.section-icon-publications {
+  --icon-from: #2774ae;
+  --icon-to: #06b6d4;
+}
+.section-icon-awards {
+  --icon-from: #f59e0b;
+  --icon-to: #ffd100;
+}
+.section-icon-experience {
+  --icon-from: #059669;
+  --icon-to: #22c55e;
+}
+
+// Each research-interest card gets its own accent (left bar, title, hover ring)
+$interest-colors: (
+  1: (
+    #c8102e,
+    #ff6b7a,
+  ),
+  2: (
+    #7c3aed,
+    #b794ff,
+  ),
+  3: (
+    #059669,
+    #34d399,
+  ),
+  4: (
+    #ea580c,
+    #fb923c,
+  ),
+  5: (
+    #db2777,
+    #f472b6,
+  ),
+  6: (
+    #2774ae,
+    #8bb8e8,
+  ),
+);
+
+@each $i, $pair in $interest-colors {
+  .interest-list li:nth-child(6n + #{$i}) {
+    --area-color: #{list.nth($pair, 1)};
+
+    html[data-theme="dark"] & {
+      --area-color: #{list.nth($pair, 2)};
+    }
+  }
+}
+
+.interest-card {
+  border-left: 4px solid var(--area-color, var(--global-theme-color));
+
+  &:hover {
+    border-color: var(--area-color, var(--global-theme-color));
+    box-shadow: 0 6px 18px -4px var(--area-color, rgba(39, 116, 174, 0.3));
+  }
+
+  .interest-name {
+    color: var(--area-color, var(--global-theme-color));
+  }
+}
+.section-icon-contact {
+  --icon-from: #0d9488;
+  --icon-to: #06b6d4;
+}
+.section-icon-summary {
+  --icon-from: #db2777;
+  --icon-to: #a855f7;
+}
+.section-icon-education {
+  --icon-from: #c8102e;
+  --icon-to: #f97316;
+}
+
+// CV card titles reuse the tiles
+.cv .card .card-title {
+  display: flex;
+  align-items: center;
 }

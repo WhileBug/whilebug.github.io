@@ -29,9 +29,21 @@
   border-radius: 12px;
   scroll-margin-top: 80px; // clear the fixed navbar when jumping from the homepage
 
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    box-shadow: 0 8px 22px rgba(39, 116, 174, 0.12);
+    transform: translateY(-3px);
+  }
+
   // highlight the card a homepage link jumped to
   &:target {
     border-color: var(--global-theme-color);
+    box-shadow: 0 0 0 3px rgba(255, 209, 0, 0.55);
   }
 
   img {

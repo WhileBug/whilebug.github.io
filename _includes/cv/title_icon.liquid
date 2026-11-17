@@ -1,0 +1,31 @@
+{% comment %} Colored icon tile for a CV card title (styles: .section-icon in _sass/_home.scss) {% endcomment %}
+{% case include.title %}
+  {% when 'Contact Information' %}
+    {% assign cv_icon = 'fa-solid fa-address-card' -%}
+    {%- assign cv_icon_key = 'contact' %}
+  {% when 'Professional Summary' %}
+    {% assign cv_icon = 'fa-solid fa-user' -%}
+    {%- assign cv_icon_key = 'summary' %}
+  {% when 'Experience' %}
+    {% assign cv_icon = 'fa-solid fa-briefcase' -%}
+    {%- assign cv_icon_key = 'experience' %}
+  {% when 'Education' %}
+    {% assign cv_icon = 'fa-solid fa-graduation-cap' -%}
+    {%- assign cv_icon_key = 'education' %}
+  {% when 'Awards' %}
+    {% assign cv_icon = 'fa-solid fa-trophy' -%}
+    {%- assign cv_icon_key = 'awards' %}
+  {% when 'Publications' %}
+    {% assign cv_icon = 'fa-solid fa-book-open' -%}
+    {%- assign cv_icon_key = 'publications' %}
+  {% when 'Projects' %}
+    {% assign cv_icon = 'fa-solid fa-diagram-project' -%}
+    {%- assign cv_icon_key = 'research' %}
+  {% when 'Skills' %}
+    {% assign cv_icon = 'fa-solid fa-screwdriver-wrench' -%}
+    {%- assign cv_icon_key = 'research' %}
+  {% else %}
+    {% assign cv_icon = 'fa-solid fa-bookmark' -%}
+    {%- assign cv_icon_key = 'summary' %}
+{% endcase %}
+<span class="section-icon section-icon-{{ cv_icon_key }}"><i class="{{ cv_icon }}"></i></span>

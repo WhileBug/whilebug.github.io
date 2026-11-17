@@ -1,9 +1,13 @@
 <ul class="plain-list">
   {% for award in site.data.cv.cv.sections.Awards %}
     <li>
-      <span
-        ><strong>{{ award.title }}</strong>{% if award.awarder %}, {{ award.awarder }}{% endif %}.</span
-      >
+      <span>
+        {%- if award.logo -%}
+          <img class="org-logo" src="{{ award.logo | prepend: '/assets/img/' | relative_url }}" alt="" loading="lazy">
+        {%- endif -%}
+        <strong>{{ award.title }}</strong>
+        {%- if award.awarder %}, {{ award.awarder }}{% endif %}.
+      </span>
       <span class="item-date">{{ award.date }}</span>
     </li>
   {% endfor %}
