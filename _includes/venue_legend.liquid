@@ -1,0 +1,9 @@
+{% comment %} Color key for the venue tags on publication thumbnails (_data/venue_categories.yml) {% endcomment %}
+<ul class="venue-legend" aria-label="Venue categories">
+  {% for category in site.data.venue_categories %}
+    <li style="--venue-color: {{ category.color }}">
+      <i class="{{ category.icon }}"></i>
+      {{ category.label }}
+    </li>
+  {% endfor %}
+</ul>

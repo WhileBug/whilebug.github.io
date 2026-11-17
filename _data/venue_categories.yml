@@ -1,0 +1,27 @@
+# Venue categories for the "<venue> <year>" tags on publication thumbnails.
+# `key` is referenced by `category` in _data/venues.yml; `color` is the tag background
+# (white text sits on it, so keep it dark enough). The legend on /publications/ lists these in order.
+- key: security
+  label: Security
+  icon: fa-solid fa-shield-halved
+  color: "#C8102E"
+- key: ml
+  label: AI / ML
+  icon: fa-solid fa-brain
+  color: "#5B3FD9"
+- key: nlp
+  label: NLP
+  icon: fa-solid fa-language
+  color: "#047857"
+- key: cv
+  label: Vision
+  icon: fa-solid fa-eye
+  color: "#BE185D"
+- key: systems
+  label: Systems & Networking
+  icon: fa-solid fa-network-wired
+  color: "#B45309"
+- key: preprint
+  label: Preprint
+  icon: fa-solid fa-file-lines
+  color: "#475569"

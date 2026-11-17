@@ -25,14 +25,27 @@
 
   // Year headings on /publications/
   h2.bibliography {
+    position: relative;
     color: var(--global-heading-color);
     font-size: 1.4rem;
+    font-variant-numeric: tabular-nums;
     text-align: left;
     border-top: 0;
     border-bottom: 1px solid var(--global-divider-color);
     padding-top: 0;
     padding-bottom: 0.35rem;
     margin-top: 2.5rem;
+
+    // short gold rule on the divider, as under the homepage section titles
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 2.5rem;
+      height: 3px;
+      background-color: var(--global-accent-color);
+    }
   }
 
   ol.bibliography {
@@ -48,10 +61,97 @@
         border-top: 1px solid var(--global-divider-color);
       }
 
+      // Thumbnails sit in a fixed 16:10 white frame, so tall figures (tables,
+      // pipelines) no longer stretch their row and every entry keeps the same rhythm.
+      .abbr figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 16 / 10;
+        margin: 0.15rem 0 0;
+        padding: 0.4rem;
+        background: #fff;
+        border: 1px solid var(--global-divider-color);
+        border-radius: 10px;
+        overflow: hidden;
+        transition:
+          border-color 0.15s ease,
+          box-shadow 0.15s ease;
+
+        picture {
+          display: contents;
+        }
+      }
+
+      // "<venue> <year>" tag pinned to the thumbnail's top-left corner (color from _data/venue_categories.yml)
+      .abbr {
+        position: relative;
+      }
+
+      .venue-tag {
+        position: absolute;
+        z-index: 2;
+        top: 0.15rem; // = figure margin-top
+        left: 15px; // = Bootstrap column padding
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.22rem 0.6rem 0.22rem 0.3rem;
+        color: #fff;
+        background-color: var(--venue-color, #475569);
+        border-radius: 10px 0 10px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+        white-space: nowrap;
+
+        // the theme colors every span with the body text color; keep the tag text white
+        span {
+          color: inherit;
+        }
+      }
+
+      .venue-icon {
+        width: 1.15rem;
+        height: 1.15rem;
+        padding: 2px;
+        object-fit: contain;
+        background: #fff;
+        border-radius: 50%;
+      }
+
+      // publisher logo in front of the venue line
+      .publisher-icon {
+        width: 1.05rem;
+        height: 1.05rem;
+        margin-right: 0.35rem;
+        vertical-align: -0.2em;
+        object-fit: contain;
+        background: #fff;
+        border-radius: 4px;
+        padding: 1px;
+      }
+
+      &:hover .abbr figure {
+        border-color: var(--global-theme-color);
+        box-shadow: 0 4px 14px rgba(39, 116, 174, 0.12);
+      }
+
       .preview {
-        display: inline-block;
+        display: block;
         width: 100%;
-        border-radius: 6px !important;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 4px !important;
+      }
+
+      @media (max-width: 575.98px) {
+        .abbr figure {
+          max-width: 240px;
+          margin-bottom: 0.6rem;
+        }
       }
 
       .abbr {
@@ -122,8 +222,10 @@
         margin-top: 0.2rem;
       }
 
+      // links and the "Cited by" pill share one line (the pill wraps after the links when needed)
       .links {
-        margin-top: 0.25rem;
+        display: inline;
+        line-height: 2;
 
         a.btn {
           color: var(--global-theme-color);
@@ -230,26 +332,35 @@
       }
 
       .badges {
-        padding-bottom: 0.5rem;
+        display: inline-block;
+        vertical-align: baseline;
+
+        a:hover {
+          text-decoration: none;
+        }
 
         span {
           display: inline-block;
-          color: v.$black-color;
-          height: 100%;
-          padding-right: 0.5rem;
           vertical-align: middle;
-
-          &:hover {
-            text-decoration: underline;
-          }
         }
 
         .cited-by {
-          color: var(--global-text-color-light);
-          font-size: 0.85rem;
+          padding: 0.05rem 0.55rem;
+          border-radius: 999px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          font-variant-numeric: tabular-nums;
+          color: var(--global-callout-text);
+          background-color: var(--global-callout-bg);
+          transition: background-color 0.15s ease;
 
           i {
             color: #4285f4;
+            margin-right: 0.15rem;
+          }
+
+          &:hover {
+            background-color: var(--global-divider-color);
           }
         }
       }
@@ -292,4 +403,27 @@
 .citation,
 .citation-number {
   color: var(--global-theme-color);
+}
+
+// Color key for the venue tags (publications page)
+.venue-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    color: #fff;
+    background-color: var(--venue-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  }
 }

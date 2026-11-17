@@ -4,26 +4,27 @@
   {% if site.enable_publication_thumbnails %}
     <div class="col-sm-3 abbr">
       {%- if entry.abbr -%}
-        {%- if site.data.venues[entry.abbr] -%}
-          {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
+        {% comment %}
+          "<venue> <year>" tag pinned to the thumbnail's top-left corner, colored by venue
+          category (_data/venues.yml -> _data/venue_categories.yml), with the venue logo.
+        {% endcomment %}
+        {% assign venue = site.data.venues[entry.abbr] %}
+        {% assign venue_category = site.data.venue_categories | where: 'key', venue.category | first %}
+        <span
+          class="venue-tag venue-{{ venue.category | default: 'other' }}"
+          {% if venue_category %}
+            style="--venue-color: {{ venue_category.color }}"
+          {% endif %}
+          title="{{ venue.name | default: entry.abbr }}{% if venue_category %} · {{ venue_category.label }}{% endif %}"
+        >
+          {%- if venue.icon -%}
+            <img class="venue-icon" src="{{ venue.icon | prepend: '/assets/img/' | relative_url }}" alt="" loading="lazy">
           {%- endif -%}
-          <abbr
-            class="badge rounded w-100"
-            {% if venue_style %}
-              {{ venue_style }}
-            {% endif -%}
-          >
-            {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
-            {% else %}
-              <div>{{- entry.abbr -}}</div>
-            {% endif %}
-          </abbr>
-        {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
-        {% endif %}
+          <span>
+            {{- entry.abbr }}
+            {{ entry.year -}}
+          </span>
+        </span>
       {% endif %}
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
@@ -181,6 +182,10 @@
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
+      {%- assign publisher_logo = site.data.venues[entry.abbr].publisher -%}
+      {%- if publisher_logo -%}
+        <img class="publisher-icon" src="{{ publisher_logo | prepend: '/assets/img/' | relative_url }}" alt="" loading="lazy">
+      {%- endif -%}
       {{ periodical | strip }}
     </div>
     <div class="periodical">
@@ -254,31 +259,34 @@
             ></span>
           {% endif %}
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
-            <a
-              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
-              aria-label="Google Scholar link"
-              role="button"
-            >
-              {% assign citation_count = 0 %}
-              {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
-              {% assign publication_key = entry.google_scholar_id %}
+            {% assign citation_count = 0 %}
+            {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
+            {% assign publication_key = entry.google_scholar_id %}
 
-              {% if site.data.citations.papers[scholar_id_key] %}
-                {% assign citation_count = site.data.citations.papers[scholar_id_key].citations %}
-              {% elsif site.data.citations.papers[publication_key] %}
-                {% assign citation_count = site.data.citations.papers[publication_key].citations %}
-              {% else %}
-                {% for paper in site.data.citations.papers %}
-                  {% assign paper_key = paper[0] %}
-                  {% if paper_key contains entry.google_scholar_id %}
-                    {% assign citation_count = paper[1].citations %}
-                    {% break %}
-                  {% endif %}
-                {% endfor %}
-              {% endif %}
+            {% if site.data.citations.papers[scholar_id_key] %}
+              {% assign citation_count = site.data.citations.papers[scholar_id_key].citations %}
+            {% elsif site.data.citations.papers[publication_key] %}
+              {% assign citation_count = site.data.citations.papers[publication_key].citations %}
+            {% else %}
+              {% for paper in site.data.citations.papers %}
+                {% assign paper_key = paper[0] %}
+                {% if paper_key contains entry.google_scholar_id %}
+                  {% assign citation_count = paper[1].citations %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
 
-              <span class="cited-by"><i class="ai ai-google-scholar"></i> Cited by {{ citation_count }}</span>
-            </a>
+            {% comment %} Zero counts are hidden; the count reads as a small Scholar pill next to the links {% endcomment %}
+            {% if citation_count > 0 %}
+              <a
+                href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
+                aria-label="Google Scholar link"
+                role="button"
+              >
+                <span class="cited-by"><i class="ai ai-google-scholar"></i> Cited by {{ citation_count }}</span>
+              </a>
+            {% endif %}
           {% endif %}
           {% if site.enable_publication_badges.inspirehep and entry_has_inspirehep_badge %}
             <a

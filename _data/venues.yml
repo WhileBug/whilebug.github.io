@@ -1,9 +1,107 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Venues used by `abbr` in _bibliography/papers.bib.
+# category:  key from _data/venue_categories.yml (sets the tag color)
+# icon:      venue / organizer logo shown inside the tag (path under assets/img/)
+# publisher: publisher logo shown before the venue line (path under assets/img/)
+# name:      full name, used as the tag tooltip
 
-"PhysRev":
-  url: https://journals.aps.org/
+# --- Security ---
+CCS:
+  name: ACM Conference on Computer and Communications Security
+  category: security
+  icon: badges/ACM.png
+  publisher: badges/ACM.png
 
-"Vision":
-  color: "#009f36"
+# --- AI / ML ---
+NeurIPS:
+  name: Conference on Neural Information Processing Systems
+  category: ml
+  icon: venues/neurips.svg
+  publisher: venues/openreview.png
+ICLR:
+  name: International Conference on Learning Representations
+  category: ml
+  icon: venues/iclr.png
+  publisher: venues/openreview.png
+TMLR:
+  name: Transactions on Machine Learning Research
+  category: ml
+  icon: venues/tmlr.png
+  publisher: venues/openreview.png
+AAAI:
+  name: AAAI Conference on Artificial Intelligence
+  category: ml
+  icon: venues/aaai.png
+  publisher: venues/aaai.png
+IJCAI:
+  name: International Joint Conference on Artificial Intelligence
+  category: ml
+  icon: venues/ijcai.png
+  publisher: venues/ijcai.png
+CIKM:
+  name: ACM International Conference on Information and Knowledge Management
+  category: ml
+  icon: badges/ACM.png
+  publisher: badges/ACM.png
+
+# --- NLP ---
+ACL:
+  name: Annual Meeting of the Association for Computational Linguistics
+  category: nlp
+  icon: venues/acl.svg
+  publisher: venues/acl.svg
+NAACL:
+  name: Nations of the Americas Chapter of the ACL
+  category: nlp
+  icon: venues/acl.svg
+  publisher: venues/acl.svg
+
+# --- Vision ---
+ICCV:
+  name: IEEE/CVF International Conference on Computer Vision
+  category: cv
+  icon: venues/cvf.png
+  publisher: venues/ieee.png
+
+# --- Systems & Networking ---
+INFOCOM:
+  name: IEEE International Conference on Computer Communications
+  category: systems
+  icon: venues/comsoc.png
+  publisher: venues/ieee.png
+GLOBECOM:
+  name: IEEE Global Communications Conference
+  category: systems
+  icon: venues/comsoc.png
+  publisher: venues/ieee.png
+CNSM:
+  name: International Conference on Network and Service Management
+  category: systems
+  icon: venues/comsoc.png
+  publisher: venues/ieee.png
+ISCC:
+  name: IEEE Symposium on Computers and Communications
+  category: systems
+  icon: venues/ieee.png
+  publisher: venues/ieee.png
+CSE:
+  name: IEEE International Conference on Computational Science and Engineering
+  category: systems
+  icon: venues/ieee.png
+  publisher: venues/ieee.png
+TPDS:
+  name: IEEE Transactions on Parallel and Distributed Systems
+  category: systems
+  icon: venues/computer-society.png
+  publisher: venues/ieee.png
+FGCS:
+  name: Future Generation Computer Systems
+  category: systems
+  icon: venues/elsevier.png
+  publisher: venues/elsevier.png
+
+# --- Preprints ---
+arXiv:
+  name: arXiv preprint
+  category: preprint
+  icon: venues/arxiv.png
+  publisher: venues/arxiv.png
